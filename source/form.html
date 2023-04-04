@@ -5,7 +5,136 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-
+    <header class="header">
+      <div class="header__wrap">
+        <a class="header__logo" href="#">
+          <img class="header__logo-image" src="./images/header/logo.svg" alt="Логотип.">
+        </a>
+        <button class="header__toogle toogle header__toogle--open">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <nav class="nav-mobile visually-hidden">
+          <ul class="nav-mobile__list">
+            <li class="nav-mobile__item">
+              <a class="nav-mobile__link" href="#">Главная</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a class="nav-mobile__link" href="#">Фото и видео</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a class="nav-mobile__link" href="#">Форма Отзыва</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a class="nav-mobile__link" href="#">HTML ACADEMY</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__wrap">
+        <div class="intro">
+          <div class="intro__landscape">
+            <img class="intro__img-text" src="./images/intro/intro-text.svg.png" alt="Добро пожаловать в Седону.">
+          </div>
+          <h2 class="intro__heading">Оставьте свой отзыв</h2>
+          <p class="intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+        <form class="form" action="#">
+          <div class="contact-form">
+            <fieldset class="form-group">
+              <h3 class="form-group__title">Представьтесь:</h3>
+              <div class="form-group__container">
+                <label class="form-group__label" for="name">Имя*:</label>
+                <input class="form-group__input" type="text" id="name" required>
+              </div>
+              <div class="form-group__container">
+                <label class="form-group__label" for="surname">Фамилия*:</label>
+                <input class="form-group__input" type="text" id="surname" required>
+              </div>
+              <div class="form-group__container">
+                <label class="form-group__label" for="patronymic">Отчество*:</label>
+                <input class="form-group__input" type="text" id="patronymic">
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <h3 class="form-group__title">Контактная информация:</h3>
+              <div class="form-group__container">
+                <label class="form-group__label" for="telephon">Контактный телефон*:</label>
+                <div class="form-group__input-phone">
+                  <input class="form-group__input form-group__input--place-icon" type="tel" id="telephon" placeholder="Введите телефон" required>
+                </div>
+              </div>
+              <div class="form-group__container">
+                <label class="form-group__label" for="e-mail">Электронная почта*:</label>
+                <div class="form-group__input-email">
+                  <input class="form-group__input form-group__input--place-icon" type="email" id="e-mail" placeholder="Введите e-mail" required>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <fieldset class="form-group interview-form">
+            <h3 class="form-group__title">Ваше общее впечатление:</h3>
+            <div class="interview-form__container">
+              <input class="interview-form__radio-input" type="radio" name="overall-impression" id="positive" checked>
+              <label class="interview-form__radio-label" for="positive">Скорее положительное</label>
+            </div>
+            <div class="interview-form__container">
+              <input class="interview-form__radio-input" type="radio" name="overall-impression" id="negative">
+              <label class="interview-form__radio-label" for="negative">Скорее отрицательное</label>
+            </div>
+            <div class="interview-form__container">
+              <input class="interview-form__radio-input" type="radio" name="overall-impression" id="difficulty">
+              <label class="interview-form__radio-label" for="difficulty">Затрудняюсь ответить<label>
+            </div>
+          </fieldset>
+          <fieldset class="form-group interview-form">
+            <h3 class="form-group__title">посещенные достопримечательности:</h3>
+            <div class="interview-form__container">
+              <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="devil-bridge" checked>
+              <label class="interview-form__checkbox-label" for="devil-bridge">Мост Дьявола</label>
+            </div>
+            <div class="interview-form__container">
+              <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="Bell-Mountain" checked>
+              <label class="interview-form__checkbox-label" for="Bell-Mountain">Гора-Колокол</label>
+            </div>
+            <div class="interview-form__container">
+              <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="Slide-Park" checked>
+              <label class="interview-form__checkbox-label" for="Slide-Park">Слайд-парк</label>
+            </div>
+            <div class="interview-form__container">
+              <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="Red-Rocks">
+              <label class="interview-form__checkbox-label" for="Red-Rocks">Красные скалы</label>
+            </div>
+          </fieldset>
+          <fieldset class="form-group comment-emotions">
+            <h3 class="form-group__title">Опишите свои эмоции:</h3>
+            <textarea class="comment-emotions__message" name="emotions" id="" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <input class="button" type="submit" value="отправить отзыв">
+          <span class="form__field-required">* — обязательные поля</span>
+        </form>
+      </div>
+    </main>
+    <footer class="footer flex-col">
+      <div class="footer__wrap">
+        <div class="footer__hashtag">#visitSEDONA</div>
+        <div class="footer__social-icon social-icon">
+          <a class="social-icon__link social-icon__link--vk" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+          <a class="social-icon__link social-icon__link--telegram" href="#">
+            <span class="visually-hidden">Телеграм</span>
+          </a>
+          <a class="social-icon__link social-icon__link--youtube" href="#">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </div>
+        <div class="footer__copyright copyright">
+          <div class="copyright__text">разработано</div>
+          <a class="copyright__logo" href="#"></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
