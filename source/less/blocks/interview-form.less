@@ -1,0 +1,131 @@
+.interview-form {
+  padding: 0;
+  padding-top: 24px;
+}
+
+.interview-form__container {
+  margin-bottom: 16px;
+}
+
+// radio-button
+
+.interview-form__radio-label {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  padding-left: 62px;
+
+  cursor: pointer;
+}
+
+.interview-form__radio-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 46px;
+  height: 46px;
+  margin: auto;
+
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.interview-form__radio-label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+
+  display: none;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.interview-form__radio-input {
+  position: absolute;
+  z-index: -1;
+
+  width: 46px;
+  height: 46px;
+  margin: 0;
+
+  opacity: 0;
+}
+
+.interview-form__radio-input:focus-visible + .interview-form__radio-label::before {
+  position: absolute;
+}
+
+.interview-form__radio-input:checked + .interview-form__radio-label::after {
+  display: block;
+}
+
+.interview-form__container--last {
+  margin-bottom: 24px;
+}
+
+// checkbox
+
+.interview-form__checkbox-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.interview-form__checkbox-label {
+  box-sizing: border-box;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  padding-left: 62px;
+  cursor: pointer;
+}
+
+.interview-form__checkbox-label::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 46px;
+  height: 46px;
+  margin: auto;
+
+  background-color: #f2f2f2;
+}
+
+.interview-form__checkbox-label::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  width: 46px;
+  height: 46px;
+  margin: auto;
+
+  background-image: url("../img/form/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.interview-form__checkbox-input:checked + .interview-form__checkbox-label::after {
+  display: block;
+}
+

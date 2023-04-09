@@ -2,27 +2,29 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
     <title>HTML Academy: Седона</title>
   </head>
-  <body>
+  <body class="page-body">
     <header class="header">
       <div class="header__wrap">
         <a class="header__logo" href="#">
-          <img class="header__logo-image" src="./images/header/logo.svg" alt="Логотип.">
+          <img class="header__logo-image" width="195" height="96" src="./img/header/logo.svg" alt="Логотип.">
         </a>
         <button class="header__toogle header__toogle--open">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <nav class="nav-mobile nav-mobile--close">
+        <!-- navigation -->
+        <nav class="nav-mobile">
           <ul class="nav-mobile__list">
             <li class="nav-mobile__item">
-              <a class="nav-mobile__link" href="#">Главная</a>
+              <a class="nav-mobile__link" href="index.html">Главная</a>
             </li>
             <li class="nav-mobile__item">
-              <a class="nav-mobile__link" href="#">Фото и видео</a>
+              <a class="nav-mobile__link" href="catalog.html">Фото и видео</a>
             </li>
             <li class="nav-mobile__item">
-              <a class="nav-mobile__link nav-mobile__link--active" href="#">Форма Отзыва</a>
+              <a class="nav-mobile__link nav-mobile__link--active" href="form.html">Форма Отзыва</a>
             </li>
             <li class="nav-mobile__item">
               <a class="nav-mobile__link" href="#">HTML ACADEMY</a>
@@ -34,13 +36,13 @@
     <main class="main">
       <div class="main__wrap">
         <div class="hero-block">
-          <div class="hero-block__landscape">
-            <img class="hero-block__img-text" src="./images/intro/intro-text-2.svg" alt="Добро пожаловать в Седону.">
+          <div class="hero-block__landscape hero-block__landscape--small">
+            <img class="hero-block__img-text hero-block__img-text--bottom" src="./img/hero-block/hero-block-text-2.svg" alt="Добро пожаловать в Седону.">
           </div>
         </div>
         <!-- feedbak-form -->
         <section class="feedback">
-          <div class="intro">
+          <div class="feedback__intro intro">
             <h1 class="intro__heading">Оставьте свой отзыв</h1>
             <p class="intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </div>
@@ -50,15 +52,15 @@
                 <h3 class="form-group__title">Представьтесь:</h3>
                 <div class="form-group__container">
                   <label class="form-group__label" for="name">Имя*:</label>
-                  <input class="form-group__input" type="text" name="name" id="name" placeholder="Введите имя">
+                  <input class="form-group__input" type="text" name="name" id="name" placeholder="Введите имя" required>
                 </div>
                 <div class="form-group__container">
                   <label class="form-group__label" for="surname">Фамилия*:</label>
-                  <input class="form-group__input" type="text" name="surname" id="surname" placeholder="Введите фамилию">
+                  <input class="form-group__input" type="text" name="surname" id="surname" placeholder="Введите фамилию" required>
                 </div>
                 <div class="form-group__container">
                   <label class="form-group__label" for="patronymic">Отчество*:</label>
-                  <input class="form-group__input" type="text" name="patronymic" id="patronymic" placeholder="Введите отчество">
+                  <input class="form-group__input form-group__input--last" type="text" name="patronymic" id="patronymic" placeholder="Введите отчество">
                 </div>
               </fieldset>
               <fieldset class="form-group">
@@ -66,13 +68,13 @@
                 <div class="form-group__container">
                   <label class="form-group__label" for="telephon">Контактный телефон*:</label>
                   <div class="form-group__input-phone">
-                    <input class="form-group__input form-group__input--place-icon" type="tel" name="telephon" id="telephon" placeholder="Введите телефон">
+                    <input class="form-group__input form-group__input--place-icon" type="tel" name="telephon" id="telephon" placeholder="Введите телефон" required>
                   </div>
                 </div>
                 <div class="form-group__container">
                   <label class="form-group__label" for="e-mail">Электронная почта*:</label>
                   <div class="form-group__input-email">
-                    <input class="form-group__input form-group__input--place-icon" type="email" name="email" id="e-mail" placeholder="Введите e-mail">
+                    <input class="form-group__input form-group__input--place-icon form-group__input--last" type="email" name="email" id="e-mail" placeholder="Введите e-mail" required>
                   </div>
                 </div>
               </fieldset>
@@ -87,9 +89,9 @@
                 <input class="interview-form__radio-input" type="radio" name="impression" value="negative" id="negative">
                 <label class="interview-form__radio-label" for="negative">Скорее отрицательное</label>
               </div>
-              <div class="interview-form__container">
+              <div class="interview-form__container interview-form__container--last">
                 <input class="interview-form__radio-input" type="radio" name="impression" value="difficulty" id="difficulty">
-                <label class="interview-form__radio-label" for="difficulty">Затрудняюсь ответить<label>
+                <label class="interview-form__radio-label" for="difficulty">Затрудняюсь ответить</label>
               </div>
             </fieldset>
             <fieldset class="form-group interview-form">
@@ -106,24 +108,23 @@
                 <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="Slide-Park" checked>
                 <label class="interview-form__checkbox-label" for="Slide-Park">Слайд-парк</label>
               </div>
-              <div class="interview-form__container">
+              <div class="interview-form__container interview-form__container--last">
                 <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="Red-Rocks">
                 <label class="interview-form__checkbox-label" for="Red-Rocks">Красные скалы</label>
               </div>
             </fieldset>
             <fieldset class="form-group comment-emotions">
               <h3 class="form-group__title">Опишите свои эмоции:</h3>
-              <textarea class="comment-emotions__message" name="emotions" id="comment-message" cols="30" rows="10" id="comment-message" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="comment-emotions__message" name="emotions" cols="30" rows="10" id="comment-message" placeholder="Опишите подробно все свои восторги"></textarea>
               <label class="comment-emotions__label" for="comment-message"></label>
             </fieldset>
-            <input class="button" type="submit" value="отправить отзыв">
+            <button class="comment-emotions__button button" type="submit">отправить отзыв</button>
             <span class="form__field-required">* — обязательные поля</span>
           </form>
         </section>
       </div>
     </main>
-    <footer class="footer flex-col">
-      <div class="footer__wrap">
+    <footer class="footer footer--flex-col">
         <p class="footer__hashtag">#visitSEDONA</p>
         <div class="footer__social-icon social-icon">
           <a class="social-icon__link social-icon__link--vk" href="#">
@@ -138,9 +139,8 @@
         </div>
         <a class="footer__copyright copyright" href="#">
           <span class="copyright__text">разработано</span>
-          <img src="#" alt="Логотип htmlacademy.">
+          <img src="./img/footer/htmlacademy-1.svg.svg" alt="Логотип htmlacademy.">
         </a>
-      </div>
-    </footer>
+      </footer>
   </body>
 </html>
