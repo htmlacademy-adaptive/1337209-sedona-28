@@ -1,20 +1,36 @@
 .form-group {
   margin: 0;
   padding: 0;
-  padding-top: 24px;
 
   border: none;
   border-top: 1px solid #e5e5e5;
 }
 
+.form-group__inner {
+  padding: 24px 20px 39px;
+
+  &--contact {
+    padding-bottom: 34px;
+  }
+
+  &--comment {
+    padding-bottom: 0;
+  }
+}
+
+.form-group__container {
+  min-width: 240px;
+}
+
 .form-group__title {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 
 .form-group__label {
   display: block;
+  padding-left: 16px;
 
   color: #333333;
 }
@@ -33,6 +49,10 @@
 
   background-color: #f2f2f2;
   border: none;
+}
+
+.form-group__container:last-child .form-group__input {
+  margin-bottom: 0;
 }
 
 .form-group__input:focus-visible {
@@ -73,10 +93,6 @@
   height: 58px;
 
   background-color: #e6e6e6;
-}
-
-.form-group__input--last {
-  margin-bottom: 34px;
 }
 
 .form-group__input--place-icon {

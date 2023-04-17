@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
     <title>HTML Academy: Седона</title>
   </head>
-  <body class="page-body">
+  <body class="page__body">
     <!-- header -->
     <header class="header">
       <div class="header__wrap">
         <a class="header__logo" href="#">
-          <img class="header__logo-image" width="195" height="96" src="./img/header/logo.svg" alt="Логотип.">
+          <img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип.">
         </a>
-        <button class="header__toogle header__toogle--open">
+        <a class="header__toogle header__toogle--open" href="#">
           <span class="visually-hidden">Открыть меню</span>
-        </button>
+        </a>
         <!-- navigation -->
         <nav class="nav-mobile">
           <ul class="nav-mobile__list">
@@ -23,6 +24,13 @@
             </li>
             <li class="nav-mobile__item">
               <a class="nav-mobile__link" href="catalog.html">Фото и видео</a>
+            </li>
+            <li class="nav-mobile__item-logo">
+              <a class="header__logo" href="index.html">
+                <img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип.">
+                <span class="visually-hidden">Логотип</span>
+              </a>
+            </li>
             </li>
             <li class="nav-mobile__item">
               <a class="nav-mobile__link" href="form.html">Форма Отзыва</a>
@@ -39,68 +47,81 @@
       <div class="main__wrap">
         <div class="hero-block">
           <div class="hero-block__landscape">
-            <img class="hero-block__img-text" src="./img/hero-block/hero-block-text.png" alt="Добро пожаловать в Седона.">
+            <img class="hero-block__photo" src="./img/hero-block/hero-block.jpg" width="320" height="389" alt="Скалистые горы Седоны.">
+            <img class="hero-block__img-text" src="./img/hero-block/hero-block-text.svg" alt="Добро пожаловать в Седона.">
           </div>
         </div>
         <!-- advantages -->
         <section class="advantages">
           <div class="advantages__wrap">
             <div class="advantages__intro intro">
-              <h1 class="intro__heading">седона — небольшой городок в аризоне, заслуживающий большего!</h1>
+              <h1 class="intro__heading intro__heading--index">седона — небольшой городок в аризоне,<br>заслуживающий большего!</h1>
               <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
             </div>
             <div class="advantages__intro features">
               <!-- УЗНАТЬ ПРО ОБЁРТКУ БЛОКОВ? -->
               <div class="features__description">
-                <h2 class="features__heading">Настоящий городок</h2>
-                <p class="features__number">№1</p>
-                <p class="features__text">Седона не аттракцион для туристов, там течет соя жизнь</p>
+                  <h2 class="features__heading">Настоящий<br>городок</h2>
+                  <p class="features__number">№1</p>
+                  <p class="features__text">Седона не аттракцион для туристов, там течет соя жизнь</p>
               </div>
-              <img class="features__photo" width="320" height="260" src="./img/advantages/advantages-pfoto-1.jpg" alt="sssss">
+              <div class="features-image-container">
+                <img class="features__photo" width="320" height="256" src="./img/advantages/advantages-pfoto-1.jpg" alt="sssss">
+              </div>
             </div>
             <div class="advantages__recommendations recommendations">
               <ul class="recommendations__list">
                 <li class="recommendations__item">
-                  <h3 class="recommendations__title">Жилье</h3>
-                  <p class="recommendations__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                  <div class="recommendations__item-container">
+                    <h3 class="recommendations__title">Жилье</h3>
+                    <p class="recommendations__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                  </div>
                 </li>
                 <li class="recommendations__item">
-                  <h3 class="recommendations__title">Еда</h3>
-                  <p class="recommendations__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                  <div class="recommendations__item-container">
+                    <h3 class="recommendations__title">Еда</h3>
+                    <p class="recommendations__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                  </div>
                 </li>
                 <li class="recommendations__item">
-                  <h3 class="recommendations__title">Сувениры</h3>
-                  <p class="recommendations__text">Не только китайского, но и местного производства!</p>
+                  <div class="recommendations__item-container">
+                    <h3 class="recommendations__title">Сувениры</h3>
+                    <p class="recommendations__text">Не только китайского,<br> но и местного производства!</p>
+                  </div>
                 </li>
               </ul>
             </div>
             <div class="advantages__intro features">
-              <div class="features__description">
-                <h2 class="features__heading">там есть мост дьявола</h2>
+              <div class="features__description features__description--change">
+                <h2 class="features__heading">там есть<br>мост дьявола</h2>
                 <p class="features__number">— №2 —</p>
                 <p class="features__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <img class="features__photo" width="320" height="260" src="./img/advantages/advantages-pfoto-2.jpg" alt="sssss">
-            </div>
-            <div class="advantages__intro features">
-              <div class="features__description features__description--secondary">
-                <h2 class="features__heading">Небольшая площадь</h2>
-                <p class="features__number features__number--secondary">— №3 —</p>
-                <p class="features__text features__text--secondary">ВСЕ интересные места находятся очень близко</p>
+              <div class="features-image-container">
+                <img class="features__photo " width="320" height="256" src="./img/advantages/advantages-pfoto-2.jpg" alt="sssss">
               </div>
             </div>
-            <div class="advantages__intro features features">
-              <div class="features__description features__description--secondary">
+            <div class="advantages__intro features">
+              <div class="features__description features__description--secondary features__description--row">
+                <div class="features__description-wrap">
+                  <h2 class="features__heading">Небольшая площадь</h2>
+                  <p class="features__number features__number--secondary">— №3 —</p>
+                  <p class="features__text features__text--secondary">ВСЕ интересные места находятся очень близко</p>
+                </div>
+              </div>
+              <div class="features__description features__description--secondary features__description--row">
+                <div class="features__description-wrap">
                 <h2 class="features__heading">Красивая дорога</h2>
                 <p class="features__number features__number--secondary">— №4 —</p>
-                <p class="features__text features__text--secondary">ехать в седону совсем не скучно!</p>
+                <p class="features__text features__text--secondary">ехать в седону из Лас-Вегаса совсем не скучно!</p>
               </div>
-            </div>
-            <div class="advantages__intro features">
-              <div class="features__description features__description--secondary">
+              </div>
+              <div class="features__description features__description--secondary features__description--row">
+                <div class="features__description-wrap">
                 <h2 class="features__heading">Мало туристов</h2>
                 <p class="features__number features__number--secondary">— №5 —</p>
                 <p class="features__text features__text--secondary">Большинство едет в гранд каньон и толпится там</p>
+              </div>
               </div>
             </div>
           </div>
@@ -118,7 +139,7 @@
       </div>
     </main>
     <!-- footer -->
-    <footer class="footer footer--flex-col">
+    <footer class="footer">
       <p class="footer__hashtag">#visitSEDONA</p>
       <div class="footer__social-icon social-icon">
         <a class="social-icon__link social-icon__link--vk" href="#">
@@ -133,7 +154,7 @@
       </div>
       <a class="footer__copyright copyright" href="#">
         <span class="copyright__text">разработано</span>
-        <img src="./img/footer/htmlacademy-1.svg.svg" alt="Логотип htmlacademy.">
+        <img src="./img/footer/htmlacademy-1.svg" alt="Логотип htmlacademy.">
       </a>
     </footer>
   </body>

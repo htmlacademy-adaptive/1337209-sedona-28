@@ -1,11 +1,12 @@
 .recommendations {
-  padding: 24px 18px 46px 65px;
+  padding: 24px 18px 46px 18px;
+  text-align: left;
 }
 
 .recommendations__list {
   display: flex;
-  gap: 26px;
   flex-direction: column;
+  column-gap: 33px;
   margin: 0;
   padding: 0;
 
@@ -15,6 +16,9 @@
 .recommendations__item {
   font-size: 14px;
   letter-spacing: 0.02em;
+  flex-grow: 1;
+  justify-content: center;
+  padding-left: 47px;
 }
 
 .recommendations__title {
@@ -28,4 +32,5 @@
 
 .recommendations__text {
   margin: 0;
+  margin-bottom: 33px;
 }
