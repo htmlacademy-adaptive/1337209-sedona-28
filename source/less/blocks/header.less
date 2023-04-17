@@ -1,0 +1,43 @@
+.header {
+  max-width: 320px;
+  width: 100%;
+  min-height: 56px;
+  margin: 0 auto;
+}
+
+.header__wrap {
+  position: relative;
+}
+
+.header__logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  display: inline-block;
+  width: 185px;
+  height: 96px;
+  margin: auto;
+}
+
+.header__toogle {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+  z-index: 1;
+  display: inline-block;
+  width: 23px;
+  height: 22px;
+
+  background-image: url("../img/header/icon-menu.svg");
+}
+
+.header__wrap:focus-within .header__toogle {
+  z-index: 3;
+  background-image: url("../img/header/icon-menu-close.svg");
+}
+
+.header__wrap:focus-within .nav-mobile {
+  visibility: inherit;
+}
