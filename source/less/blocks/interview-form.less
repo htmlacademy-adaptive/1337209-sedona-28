@@ -1,9 +1,46 @@
 .interview-form {
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    &:last-child {
+      padding-top: 40px;
+    }
+  }
 }
 
 .interview-form__inner {
   padding: 24px 20px 32px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 73px;
+  }
+}
+
+.interview-form__list {
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 49px;
+    padding: 0 36px;
+
+    &:last-of-type {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 32px;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 960px;
+    column-gap: 64px;
+    padding: 0 44px;
+  }
 }
 
 .interview-form__item {
@@ -12,52 +49,125 @@
 
 .interview-form__title {
   position: relative;
-
   font-size: 21px;
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+
+      margin: auto;
+      width: 123px;
+      height: 1px;
+
+      background-color: #dbdbdb;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      margin: auto;
+      width: 123px;
+      height: 1px;
+
+      background-color: #dbdbdb;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 45px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+
+      margin: auto;
+      width: 280px;
+      height: 1px;
+
+      background-color: #dbdbdb;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      width: 280px;
+      height: 1px;
+      margin: auto;
+
+      background-color: #dbdbdb;
+    }
+
+    &--attractions {
+      margin-bottom: 59px;
+    }
+
+    &--emotions {
+      margin-bottom: 28px;
+    }
+  }
 }
 
 // radio-button
 
 .interview-form__radio-label {
   position: relative;
-
   display: flex;
   align-items: center;
   min-height: 46px;
   padding-left: 62px;
-
   cursor: pointer;
-}
 
-.interview-form__radio-label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
 
-  width: 46px;
-  height: 46px;
-  margin: auto;
+    width: 46px;
+    height: 46px;
+    margin: auto;
 
-  background-color: #f2f2f2;
-  border-radius: 50%;
-}
+    background-color: #f2f2f2;
+    border-radius: 50%;
+  }
 
-.interview-form__radio-label::after {
-  content: "";
-  position: absolute;
-  left: 15px;
-  top: 0;
-  bottom: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
 
-  display: none;
-  width: 16px;
-  height: 16px;
-  margin: auto;
+    display: none;
+    width: 16px;
+    height: 16px;
+    margin: auto;
 
-  background-color: #000000;
-  border-radius: 50%;
+    background-color: #000000;
+    border-radius: 50%;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: none;
+  }
 }
 
 .interview-form__radio-input {
@@ -77,10 +187,6 @@
 
 .interview-form__radio-input:checked + .interview-form__radio-label::after {
   display: block;
-}
-
-.interview-form__item--last {
-  margin-bottom: 24px;
 }
 
 // checkbox
@@ -103,39 +209,39 @@
   font-weight: 700;
   text-transform: none;
   cursor: pointer;
-}
 
-.interview-form__checkbox-label::before {
-  content: "";
+  &::before {
+    content: "";
 
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
 
-  width: 46px;
-  height: 46px;
-  margin: auto;
+    width: 46px;
+    height: 46px;
+    margin: auto;
 
-  background-color: #f2f2f2;
-}
+    background-color: #f2f2f2;
+  }
 
-.interview-form__checkbox-label::after {
-  content: "";
+  &::after {
+    content: "";
 
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
 
-  display: none;
-  width: 46px;
-  height: 46px;
-  margin: auto;
+    display: none;
+    width: 46px;
+    height: 46px;
+    margin: auto;
 
-  background-image: url("../img/form/tick.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+    background-image: url("../img/form/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .interview-form__checkbox-input:checked + .interview-form__checkbox-label::after {

@@ -1,3 +1,13 @@
+.hero-block {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    object-fit: cover;
+  }
+}
+
 .hero-block__landscape {
   position: relative;
 
@@ -21,4 +31,10 @@
   right: 0;
 
   margin: auto;
+}
+
+.hero-block__img-text {
+  @media (min-width: @tablet-width) {
+    top: 77px;
+  }
 }

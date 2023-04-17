@@ -4,6 +4,37 @@
 
   border: none;
   border-top: 1px solid #e5e5e5;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding-top: 0;
+    border: none;
+
+    &:first-child::before {
+      content: "";
+      position: absolute;
+      right: -29px;
+      top: -8px;
+      bottom: 0;
+
+      margin: auto;
+      border-right: 1px solid #dbdbdb;
+      min-height: 338px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child::before {
+      content: "";
+      position: absolute;
+      right: -49.5px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      min-height: 338px;
+      border-right: 1px solid #dbdbdb;
+    }
+  }
 }
 
 .form-group__inner {
@@ -15,6 +46,10 @@
 
   &--comment {
     padding-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
   }
 }
 

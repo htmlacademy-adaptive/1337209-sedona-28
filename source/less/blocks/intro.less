@@ -1,8 +1,10 @@
 .intro {
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 auto;
   font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 520px;
+  }
 }
 
 .intro__heading {
@@ -14,6 +16,10 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .intro__text {
@@ -21,4 +27,10 @@
 
   text-align: center;
   font-size: 14px;
+}
+
+.intro__heading--index {
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
