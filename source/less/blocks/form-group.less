@@ -102,32 +102,31 @@
 
 .form-group__input-email {
   position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 58px;
+    height: 58px;
+
+    background: #e6e6e6 url("../img/form/email.svg") no-repeat 50%;
+  }
 }
 
 .form-group__input-phone {
   position: relative;
-}
 
-.form-group__input-phone::before {
-  content: "";
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
 
-  position: absolute;
-  right: 0;
+    width: 58px;
+    height: 58px;
 
-  width: 58px;
-  height: 58px;
-
-  background-color: #e6e6e6;
-}
-
-.form-group__input-email::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 58px;
-  height: 58px;
-
-  background-color: #e6e6e6;
+    background: #e6e6e6 url("../img/form/phone.svg") no-repeat 50%;
+  }
 }
 
 .form-group__input--place-icon {

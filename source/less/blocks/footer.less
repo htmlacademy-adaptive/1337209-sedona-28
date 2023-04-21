@@ -22,15 +22,25 @@
 
 .footer__hashtag {
   margin: 0;
+  font-weight: 700;
+  font-size: 21px;
 
   @media (min-width: @tablet-width) {
     margin-right: auto;
   }
 }
 
-.footer__copyright {
+.footer__copyright-link {
   text-decoration: none;
   color: #000000;
+
+  &:hover {
+    color: @bluegrey;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
 
   @media (min-width: @tablet-width) {
     margin-left: auto;

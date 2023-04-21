@@ -4,14 +4,18 @@
   text-align: center;
 }
 
-.advantages__intro:first-child {
-  padding: 32px 20px 16px;
+.advantages__intro {
+  flex-wrap: wrap;
 
-  @media (min-width: @tablet-width) {
-    padding: 47px 0 55px;
-  }
+  &:first-child {
+    padding: 32px 20px 16px;
 
-  @media (min-width: @desktop-width) {
-    padding: 59px 0 44px;
+    @media (min-width: @tablet-width) {
+      padding: 47px 0 55px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 59px 0 44px;
+    }
   }
 }
