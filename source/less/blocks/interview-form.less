@@ -16,7 +16,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 73px;
+    padding: 0 20px 56px 20px;
   }
 }
 
@@ -37,9 +37,14 @@
   }
 
   @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
     max-width: 960px;
     column-gap: 64px;
     padding: 0 44px;
+
+    &:last-of-type {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
