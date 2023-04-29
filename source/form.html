@@ -9,37 +9,34 @@
   <body class="page__body">
     <div class="page__wrapper">
       <header class="header">
-        <div class="header__wrap">
-          <a class="header__logo" href="index.html">
-            <img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип.">
-          </a>
-          <button class="header__toogle header__toogle--open">
+        <a class="header__logo" href="index.html">
+          <img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип.">
+        </a>
+        <!-- navigation -->
+        <nav class="header__nav nav nav--nojs">
+          <button class="nav__toogle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <!-- navigation -->
-          <!-- nav--close, закрывает выпадающее меню -->
-          <nav class="header__nav nav nav--close">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link" href="index.html">Главная</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="catalog.html">Фото и видео</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link nav__link--active" href="form.html">Форма Отзыва</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">HTML ACADEMY</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="catalog.html">Фото и видео</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="form.html">Форма Отзыва</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">HTML ACADEMY</a>
+            </li>
+          </ul>
+        </nav>
       </header>
       <main class="main">
         <div class="main__wrap">
           <div class="hero-block hero-block--r">
-              <img class="hero-block__img-text hero-block__img-text--change" src="../img/hero-block/catalog-form/mobile-sedona.svg" alt="Добро пожаловать в Седона.">
+              <img class="hero-block__img-text hero-block__img-text--change" src="../img/hero-block/catalog-form/mobile-sedona.svg" alt="Добро пожаловать в Седону.">
           </div>
           <!-- feedback-form -->
           <section class="feedback">
@@ -112,27 +109,27 @@
                   <h3 class="form-group__title interview-form__title interview-form__title--attractions">посещенные<br>достопримечательности:</h3>
                   <div class="interview-form__list">
                     <div class="interview-form__item">
-                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="devil-bridge" checked>
+                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="devil-bridge" value="devil-bridge" checked>
                       <label class="interview-form__checkbox-label" for="devil-bridge">Мост Дьявола</label>
                     </div>
                     <div class="interview-form__item">
-                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="Bell-Mountain" checked>
-                      <label class="interview-form__checkbox-label" for="Bell-Mountain">Гора-Колокол</label>
+                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="bell-Mountain" value="bell-Mountain" checked>
+                      <label class="interview-form__checkbox-label" for="bell-Mountain">Гора-Колокол</label>
                     </div>
                     <div class="interview-form__item">
-                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="Slide-Park" checked>
-                      <label class="interview-form__checkbox-label" for="Slide-Park">Слайд-парк</label>
+                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="slide-Park" value="slide-Park" checked>
+                      <label class="interview-form__checkbox-label" for="slide-Park">Слайд-парк</label>
                     </div>
                     <div class="interview-form__item">
-                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="Red-Rocks">
-                      <label class="interview-form__checkbox-label" for="Red-Rocks">Красные скалы</label>
+                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="red-rocks" value="red-rocks">
+                      <label class="interview-form__checkbox-label" for="red-rocks">Красные скалы</label>
                     </div>
                   </div>
                 </div>
               </fieldset>
               <fieldset class="form-group comment-emotions">
                 <div class="form-group__inner form-group__inner--comment">
-                  <h3 class="form-group__title interview-form__title interview-form__title--emotions">Опишите свои эмоции:</h3>
+                  <h3 class="form-group__title form-group__title--emotions">Опишите свои эмоции:</h3>
                   <div class="comment-emotions__wrap">
                     <textarea class="comment-emotions__message" name="emotions" cols="30" rows="10" id="comment-message" placeholder="Опишите подробно все свои восторги"></textarea>
                     <label class="comment-emotions__label" for="comment-message"></label>
@@ -160,10 +157,10 @@
             <span class="visually-hidden">Твиттер</span>
           </a>
         </div>
-        <a class="footer__copyright-link copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="footer__copyright-link copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="сайт HTML Academy">
           <span class="copyright__text">разработано</span>
-          <svg class="copyright__html-logo" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.65 0.449951H13.55L0.0500031 1.84995V26.55L13.55 34.5499L26.95 26.55V1.84995L13.65 0.449951ZM25.05 12.55L13.55 5.74995V5.64995H13.45L13.35 5.54995V5.64995L1.95 12.55V3.54995L13.45 2.34995L25.05 3.54995V12.55ZM13.45 7.24995L24.95 13.95L20.45 16.55L13.35 12.35V13.75L19.25 17.25L18.35 17.75L13.35 14.75V16.15L17.15 18.45L16.35 18.95L13.35 17.15V18.55L15.25 19.65L13.45 20.75L2.05 14.05L13.45 7.24995ZM1.95 15.55L13.35 22.35V23.35L5.45 18.65V20.05L13.45 24.85V25.95L5.45 21.25V22.65L13.45 27.45L21.55 22.55V17.35L24.95 15.35V25.35L13.45 32.25L1.95 25.45V15.55Z" fill="currentColor"/>
+          <svg class="copyright__html-logo" width="27" height="35">
+            <use xlink:href="../img/sprite.svg#html-academy-logo"></use>
           </svg>
         </a>
       </footer>

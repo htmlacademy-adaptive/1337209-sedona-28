@@ -2,16 +2,16 @@
   position: relative;
 
   width: 100%;
-  height: 389px;
+  min-height: 389px;
   overflow: hidden;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
 
   background: #a6cff0 url("../img/hero-block/tablet-back-index@1x.webp") no-repeat top;
   background-size: cover;
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/hero-block/tablet-back-index@1x.webp") center;
-    height: 518px;
+    min-height: 518px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-block/tablet-back-index@2x.webp");
@@ -32,12 +32,11 @@
     position: relative;
 
     width: 100%;
-    height: 158px;
-    padding-bottom: 1px;
+    min-height: 158px;
     background: #a6cff0 url("../img/hero-block/tablet-back-index@1x.webp") no-repeat bottom;
 
     @media (min-width: @tablet-width) {
-      height: 290px;
+      min-height: 290px;
       background-size: cover;
 
       @media (min-resolution: 2dppx) {

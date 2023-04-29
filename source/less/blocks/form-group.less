@@ -61,6 +61,81 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 28px;
+
+  &--emotions {
+    position: relative;
+    font-size: 21px;
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+
+        margin: auto;
+        width: 123px;
+        height: 1px;
+
+        background-color: #dbdbdb;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        margin: auto;
+        width: 123px;
+        height: 1px;
+
+        background-color: #dbdbdb;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 45px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+
+        margin: auto;
+        width: 280px;
+        height: 1px;
+
+        background-color: #dbdbdb;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        width: 280px;
+        height: 1px;
+        margin: auto;
+
+        background-color: #dbdbdb;
+      }
+
+      &--attractions {
+        margin-bottom: 59px;
+      }
+
+      &--emotions {
+        margin-bottom: 28px;
+      }
+    }
+  }
 }
 
 .form-group__label {
