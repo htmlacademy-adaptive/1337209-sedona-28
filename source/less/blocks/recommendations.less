@@ -1,6 +1,11 @@
 .recommendations {
   padding: 24px 18px 46px 18px;
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    text-align: center;
+  }
 }
 
 .recommendations__list {
@@ -11,6 +16,18 @@
   padding: 0;
 
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 0;
+    min-height: 330px;
+    text-align: center;
+  }
 }
 
 .recommendations__item {
@@ -18,7 +35,91 @@
   letter-spacing: 0.02em;
   flex-grow: 1;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    min-height: 331px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 50px;
+  }
+
+  &:last-child .recommendations__text {
+    margin: 0;
+  }
+}
+
+.recommendations__item-container {
+  position: relative;
   padding-left: 47px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 190px;
+    padding: 0;
+    padding-top: 106px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 300px;
+  }
+}
+
+.recommendations__item-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 39px;
+  height: 36px;
+  background: url("../img/recomendation/mobile-icon-house.svg") no-repeat center;
+
+  @media (min-width: @tablet-width) {
+    width: 77px;
+    height: 72px;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background: url("../img/recomendation/desktop-icon-house.svg") no-repeat center;
+  }
+}
+
+.recommendations__item-container--food::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url("../img/recomendation/mobile-icon-food.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 68px;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background: url("../img/recomendation/desktop-icon-food.svg") no-repeat center;
+  }
+}
+
+.recommendations__item-container--gift::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 38px;
+  background: url("../img/recomendation/mobile-icon-gift.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 76px;
+    height: 75px;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background: url("../img/recomendation/desktop-icon-gift.svg") no-repeat center;
+  }
 }
 
 .recommendations__title {
@@ -28,9 +129,4 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
-}
-
-.recommendations__text {
-  margin: 0;
-  margin-bottom: 33px;
 }

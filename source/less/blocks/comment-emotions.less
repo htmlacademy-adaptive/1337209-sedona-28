@@ -14,10 +14,44 @@
   outline: none;
   resize: none;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin: 0;
+    margin-bottom: 48px;
+  }
 }
 
 .comment-emotions__button {
   border: none;
+
+  @media (min-width: @tablet-width) {
+    max-width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 384px;
+  }
+}
+
+.comment-emotions__button-wrap {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.comment-emotions__wrap {
+  @media (min-width: @desktop-width) {
+    padding: 0 96px;
+  }
 }
 
 .comment-emotions__message::placeholder {

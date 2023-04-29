@@ -1,9 +1,84 @@
-.hero-block__landscape {
+.hero-block {
   position: relative;
 
   width: 100%;
+  min-height: 389px;
+  overflow: hidden;
+  padding-bottom: 1px;
 
-  background-color: #a6cff0;
+  background: #a6cff0 url("../img/hero-block/tablet-back-index@1x.webp") no-repeat top;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/hero-block/tablet-back-index@1x.webp") center;
+    min-height: 518px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-block/tablet-back-index@2x.webp");
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("../img/hero-block/desktop-back-index@1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/hero-block/desktop-back-index@2x.webp");
+      background-size: cover;
+    }
+  }
+
+  &--r {
+    position: relative;
+
+    width: 100%;
+    min-height: 158px;
+    background: #a6cff0 url("../img/hero-block/tablet-back-index@1x.webp") no-repeat bottom;
+
+    @media (min-width: @tablet-width) {
+      min-height: 290px;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hero-block/tablet-back-index@2x.webp");
+        background-size: cover;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      background: url("../img/hero-block/desktop-back-index@1x.webp") no-repeat bottom;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/hero-block/desktop-back-index@2x.webp") bottom;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.hero-block::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+
+  width: 600px;
+  height: 57px;
+  background-image: url("../img/hero-block/hero-triangle.svg");
+  background-repeat: no-repeat;
+}
+
+.hero-block::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  width: 600px;
+  height: 57px;
+  transform: scaleX(-1);
+  background-image: url("../img/hero-block/hero-triangle.svg");
+  background-repeat: no-repeat;
 }
 
 .hero-block__photo {
@@ -13,12 +88,26 @@
   object-fit: cover;
 }
 
-.hero-block__img-text,
-.hero-block__img-text--bottom {
+.hero-block__img-text {
   position: absolute;
-  top: 90px;
+  top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
 
   margin: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+  }
+
+  &--change {
+    @media (min-width: @tablet-width) {
+      width: 457px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 460px;
+    }
+  }
 }

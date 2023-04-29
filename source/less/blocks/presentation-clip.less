@@ -2,10 +2,27 @@
   padding: 17px 20px 0 20px;
 
   border-top: 1px solid #e5e5e5;
+
+  @media (min-width: @tablet-width) {
+    padding: 58px 60px;
+    padding-bottom: 40px;
+
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 199px;
+    padding-right: 199px;
+    padding-bottom: 84px;
+  }
 }
 
 .presentation-clip__video-wrap {
   position: relative;
+}
+
+.presentation-clip__video {
+  width: 100%;
 }
 
 .presentation-clip__video-play {
@@ -27,6 +44,12 @@
 
 .presentation-clip__description {
   padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 445px;
+    margin: 0 auto;
+    padding-bottom: 66px;
+  }
 }
 
 .presentation-clip__title {
@@ -40,4 +63,10 @@
   margin-bottom: 0;
 
   text-align: center;
+}
+
+.presentation-clip__video-container {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }

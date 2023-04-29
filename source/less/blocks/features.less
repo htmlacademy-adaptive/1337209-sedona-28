@@ -1,17 +1,78 @@
 .features {
   color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .features__description {
+  position: relative;
   padding: 37px 20px;
-
   background-color: #81b3d2;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+
+    max-width: 256px;
+    padding: 52px 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 400px;
+    width: 100%;
+    padding: 52px 50px;
+  }
+
+  &--triangle {
+    @media (max-width: 320px) {
+      padding-top: 69px;
+    }
+  }
+
+  &--triangle::before {
+    @media (max-width: 320px) {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 37px;
+      background: url("../img/intro/intro-triangle.svg") no-repeat;
+    }
+  }
+
+  // &--triangle::after {
+  //   @media (max-width: 320px) {
+  //     content: "";
+  //     position: absolute;
+  //     top: -1px;
+  //     right: 0;
+  //     width: 384px;
+  //     height: 37px;
+  //     background: url("../img/intro/intro-triangle1.svg") no-repeat;
+  //     transform: scaleX(-1);
+  //   }
+  // }
+}
+
+.features__description-wrap {
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    max-width: 190px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 300px;
+  }
 }
 
 .features__description--change {
   order: 1;
 }
-
 
 .features__heading {
   margin-top: 0;
@@ -27,7 +88,6 @@
 
 .features__text {
   margin-bottom: 0;
-  font-size: 16px;
 }
 
 .features-image-container {
@@ -43,6 +103,8 @@
   vertical-align: middle;
 }
 
+// modifier
+
 .features__description--secondary {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -50,11 +112,22 @@
   background-color: @lightgrey;
   color: #000000;
   border-bottom: 1px solid #d6d6d6;
-}
 
-.features__description--secondary:last-child {
-  border: none;
-  padding-bottom: 28px;
+  &:last-child {
+    border: none;
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 100%;
+    width: calc(100% / 3);
+    padding: 41px 33px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 52px 50px;
+  }
 }
 
 .features__number--secondary {

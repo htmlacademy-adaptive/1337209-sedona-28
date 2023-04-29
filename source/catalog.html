@@ -7,138 +7,202 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body class="page__body">
-    <!-- header -->
-    <header class="header">
-      <div class="header__wrap">
-        <a class="header__logo" href="#">
+    <div class="page__wrapper">
+      <!-- header -->
+      <header class="header">
+        <a class="header__logo" href="index.html">
           <img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип.">
         </a>
-        <button class="header__toogle header__toogle--open">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
         <!-- navigation -->
-        <nav class="nav-mobile">
-          <ul class="nav-mobile__list">
-            <li class="nav-mobile__item">
-              <a class="nav-mobile__link" href="index.html">Главная</a>
+        <nav class="header__nav nav nav--nojs">
+          <button class="nav__toogle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="index.html">Главная</a>
             </li>
-            <li class="nav-mobile__item">
-              <a class="nav-mobile__link nav-mobile__link--active" href="catalog.html">Фото и видео</a>
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="catalog.html">Фото и видео</a>
             </li>
-            <li class="nav-mobile__item-logo">
-              <a class="header__logo" href="index.html">
-                <img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип.">
-                <span class="visually-hidden">Логотип</span>
-              </a>
+            <li class="nav__item">
+              <a class="nav__link" href="form.html">Форма Отзыва</a>
             </li>
-            <li class="nav-mobile__item">
-              <a class="nav-mobile__link" href="form.html">Форма Отзыва</a>
-            </li>
-            <li class="nav-mobile__item">
-              <a class="nav-mobile__link" href="#">HTML ACADEMY</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#">HTML ACADEMY</a>
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
-<!--  main -->
-    <main class="main">
-      <div class="main__wrap">
-        <div class="hero-block">
-          <div class="hero-block__landscape">
-            <img class="hero-block__photo" src="./img/hero-block/hero-block-1.jpg" width="320" height="214" alt="Скалистые горы Седоны.">
-            <img class="hero-block__img-text hero-block__img-text--bottom" src="./img/hero-block/hero-block-text-2.svg" alt="Добро пожаловать в Седона.">
+      </header>
+<!--    main -->
+      <main class="main">
+        <div class="main__wrap">
+          <div class="hero-block hero-block--r">
+              <img class="hero-block__img-text" src="../img/hero-block/catalog-form/mobile-sedona.svg" alt="Добро пожаловать в Седона.">
           </div>
-        </div>
-        <!-- catalog-photo -->
-        <section class="catalog-cards">
-          <div class="catalog-cards__intro intro">
-            <h2 class="intro__heading">Фото и видео</h2>
-            <p class="intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-          </div>
-          <div class="catalog-cards__container">
-            <div class="catalog-cards__card card catalog-cards__card--first">
-              <a class="card__image-link" href="#">
-                  <img class="card__image" src="./img/catalog-cards/photo-mobile-1.jpg" alt="Фото, неродные просторы." >
-                <div class="card__info">
-                  <div class="card__description">
-                    <h3 class="card__heading">Неродные просторы</h3>
-                    <p class="card__author">Автор фото: Борис</p>
-                  </div>
-                    <p class="card__count">1350</p>
-                </div>
-              </a>
+          <!-- catalog-photo -->
+          <section class="catalog-cards">
+            <div class="catalog-cards__intro intro">
+              <h2 class="intro__heading">Фото и видео</h2>
+              <p class="intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
             </div>
-            <div class="catalog-cards__card card">
-              <a class="card__image-link" href="#">
-                <img class="card__image" src="./img/catalog-cards/photo-mobile-2.jpg" alt="Фото, местная растительность." >
-              <div class="card__info">
-                <div class="card__description">
-                  <h3 class="card__heading">Местная растительность</h3>
-                  <p class="card__author">Автор фото: Сергей</p>
-                </div>
-                  <span class="card__count">143</span>
+            <div class="catalog-cards__container">
+              <div class="catalog-cards__card card catalog-cards__card--first">
+                <a class="card__image-link" href="#">
+                    <picture>
+                        <source media="(min-width: 1200px)" type="image/webp" srcset="../img/catalog-cards/desktop-cards-1.webp 1x, ../img/catalog-cards/desktop-cards-1@2x.webp 2x">
+                        <source media="(min-width: 1200px)" type="image/png" srcset="../img/catalog-cards/desktop-cards-1.png 1x, ../img/catalog-cards/desktop-cards-1@2x.png 2x">
+                        <source media="(min-width: 1200px)" type="image/jpg" srcset="../img/catalog-cards/desktop-cards-1.jpg 1x, ../img/catalog-cards/desktop-cards-1@2x.jpg 2x">
+                        <source media="(min-width: 768px)" type="image/webp" srcset="../img/catalog-cards/tablet-cards-1.webp 1x, ../img/catalog-cards/tablet-cards-1@2x.webp 2x">
+                        <source media="(min-width: 768px)" type="image/png" srcset="../img/catalog-cards/tablet-cards-1.png 1x, ../img/catalog-cards/tablet-cards-1@2x.png 2x">
+                        <source media="(min-width: 768px)" type="image/jpg" srcset="../img/catalog-cards/tablet-cards-1.jpg 1x, ../img/catalog-cards/tablet-cards-1@2x.jpg 2x">
+                        <source type="image/webp" srcset="../img/catalog-cards/mobile-cards-1.webp 1x, ../img/catalog-cards/mobile-cards-1@2x.webp 2x">
+                        <source type="image/png" srcset="../img/catalog-cards/mobile-cards-1.png 1x, ../img/catalog-cards/mobile-cards-1@2x.png 2x">
+                      <img class="card__image" src="../img/catalog-cards/mobile-cards-1.jpg" srcset="../img/catalog-cards/mobile-cards-1@2x.jpg" alt="Фото, неродные просторы." >
+                    </picture>
+                  <div class="card__info">
+                    <div class="card__description">
+                      <h3 class="card__heading">Неродные просторы</h3>
+                      <p class="card__author">Автор фото: Борис</p>
+                    </div>
+
+                      <p class="card__count">
+                        <svg class="card__like-icon" width="23" height="21">
+                          <use xlink:href="../img/sprite.svg#like"></use>
+                        </svg>
+                        1350
+                      </p>
+                  </div>
+                </a>
               </div>
-            </a>
-            </div>
-            <div class="catalog-cards__card card">
-              <a class="card__image-link" href="#">
-                <img class="card__image" src="./img/catalog-cards/photo-mobile-3.jpg" alt="Фото, дорога на север." >
+              <div class="catalog-cards__card card">
+                <a class="card__image-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="../img/catalog-cards/desktop-cards-2.webp 1x, ../img/catalog-cards/desctop-cards-2@2x.webp">
+                    <source media="(min-width: 1200px)" type="image/png" srcset="../img/catalog-cards/desktop-cards-2.png 1x, ../img/catalog-cards/desctop-cards-2@2x.png">
+                    <source media="(min-width: 1200px)" type="image/jpg" srcset="../img/catalog-cards/desktop-cards-2.jpg 1x, ../img/catalog-cards/desctop-cards-2@2x.jpg">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="../img/catalog-cards/tablet-cards-2.webp 1x, ../img/catalog-cards/tablet-cards-2@2x.webp">
+                    <source media="(min-width: 768px)" type="image/png" srcset="../img/catalog-cards/tablet-cards-2.png 1x, ../img/catalog-cards/tablet-cards-2@2x.png">
+                    <source media="(min-width: 768px)" type="image/jpg" srcset="../img/catalog-cards/tablet-cards-2.jpg 1x, ../img/catalog-cards/tablet-cards-2@2x.jpg">
+                    <source type="image/webp" srcset="../img/catalog-cards/mobile-cards-2.webp 1x, ../img/catalog-cards/mobile-cards-2@2x.webp">
+                    <source type="image/png" srcset="../img/catalog-cards/mobile-cards-2.png 1x, ../img/catalog-cards/mobile-cards-2@2x.png">
+                    <img class="card__image" src="../img/catalog-cards/mobile-cards-2.jpg" srcset="../img/catalog-cards/mobile-cards-2@2x.jpg" alt="Фото, местная растительность." >
+                  </picture>
                 <div class="card__info">
                   <div class="card__description">
-                    <h3 class="card__heading">Дорога на север</h3>
-                    <p class="card__author">Автор фото: Пётр</p>
+                    <h3 class="card__heading">Местная растительность</h3>
+                    <p class="card__author">Автор фото: Сергей</p>
                   </div>
-                    <p class="card__count">96</p>
+                    <span class="card__count">
+                      <svg class="card__like-icon" width="23" height="21">
+                        <use xlink:href="../img/sprite.svg#like"></use>
+                      </svg>
+                      143
+                    </span>
                 </div>
               </a>
-            </div>
-            <div class="catalog-cards__card card">
-              <a class="card__image-link" href="#">
-                <img class="card__image" src="./img/catalog-cards/photo-mobile-4.jpg" alt="Фото, Мост дьявола." >
-                <div class="card__info">
-                  <div class="card__description">
-                    <h3 class="card__heading">Мост дьявола</h3>
-                    <p class="card__author">Автор фото: Антон</p>
+              </div>
+              <div class="catalog-cards__card card">
+                <a class="card__image-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="../img/catalog-cards/desktop-cards-3.webp 1x, ../img/catalog-cards/desctop-cards-3@2x.webp">
+                    <source media="(min-width: 1200px)" type="image/png" srcset="../img/catalog-cards/desktop-cards-3.png 1x, ../img/catalog-cards/desctop-cards-3@2x.png">
+                    <source media="(min-width: 1200px)" type="image/jpg" srcset="../img/catalog-cards/desktop-cards-3.jpg 1x, ../img/catalog-cards/desctop-cards-3@2x.jpg">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="../img/catalog-cards/tablet-cards-3.webp 1x, ../img/catalog-cards/tablet-cards-3@2x.webp">
+                    <source media="(min-width: 768px)" type="image/png" srcset="../img/catalog-cards/tablet-cards-3.png 1x, ../img/catalog-cards/tablet-cards-3@2x.png">
+                    <source media="(min-width: 768px)" type="image/jpg" srcset="../img/catalog-cards/tablet-cards-3.jpg 1x, ../img/catalog-cards/tablet-cards-3@2x.jpg">
+                    <source type="image/webp" srcset="../img/catalog-cards/mobile-cards-3.webp 1x, ../img/catalog-cards/mobile-cards-3@2x.webp">
+                    <source type="image/png" srcset="../img/catalog-cards/mobile-cards-3.png 1x, ../img/catalog-cards/mobile-cards-3@2x.png">
+                    <img class="card__image" src="../img/catalog-cards/mobile-cards-3.jpg" srcset="../img/catalog-cards/mobile-cards-3@2x.jpg" alt="Фото, дорога на север." >
+                  </picture>
+                  <div class="card__info">
+                    <div class="card__description">
+                      <h3 class="card__heading">Дорога на север</h3>
+                      <p class="card__author">Автор фото: Пётр</p>
+                    </div>
+                      <p class="card__count">
+                        <svg class="card__like-icon" width="23" height="21">
+                          <use xlink:href="../img/sprite.svg#like"></use>
+                        </svg>
+                        96
+                      </p>
                   </div>
-                  <p class="card__count">254</p>
-                </div>
-              </a>
+                </a>
+              </div>
+              <div class="catalog-cards__card card">
+                <a class="card__image-link" href="#">
+                  <picture>
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="../img/catalog-cards/desktop-cards-4.webp 1x, ../img/catalog-cards/desctop-cards-4@2x.webp">
+                    <source media="(min-width: 1200px)" type="image/png" srcset="../img/catalog-cards/desktop-cards-4.png 1x, ../img/catalog-cards/desctop-cards-4@2x.png">
+                    <source media="(min-width: 1200px)" type="image/jpg" srcset="../img/catalog-cards/desktop-cards-4.jpg 1x, ../img/catalog-cards/desctop-cards-4@2x.jpg">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="../img/catalog-cards/tablet-cards-4.webp 1x, ../img/catalog-cards/tablet-cards-4@2x.webp">
+                    <source media="(min-width: 768px)" type="image/png" srcset="../img/catalog-cards/tablet-cards-4.png 1x, ../img/catalog-cards/tablet-cards-4@2x.png">
+                    <source media="(min-width: 768px)" type="image/jpg" srcset="../img/catalog-cards/tablet-cards-4.jpg 1x, ../img/catalog-cards/tablet-cards-4@2x.jpg">
+                    <source type="image/webp" srcset="../img/catalog-cards/mobile-cards-4.webp 1x, ../img/catalog-cards/mobile-cards-4@2x.webp">
+                    <source type="image/png" srcset="../img/catalog-cards/mobile-cards-4.png 1x, ../img/catalog-cards/mobile-cards-4@2x.png">
+                    <img class="card__image" src="../img/catalog-cards/mobile-cards-4.jpg" srcset="../img/catalog-cards/mobile-cards-4@2x.jpg" alt="Фото, Мост дьявола в Седоне." >
+                  </picture>
+                  <div class="card__info">
+                    <div class="card__description">
+                      <h3 class="card__heading">Мост дьявола</h3>
+                      <p class="card__author">Автор фото: Антон</p>
+                    </div>
+                    <p class="card__count">
+                      <svg class="card__like-icon" width="23" height="21">
+                        <use xlink:href="../img/sprite.svg#like"></use>
+                      </svg>
+                      254
+                    </p>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
-        </section>
-        <div class="presentation-clip">
-          <div class="presentation-clip__description">
-            <h3 class="presentation-clip__title">Все еще сомневаетесь?</h3>
-            <p class="presentation-clip__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-          </div>
-          <div class="presentation-clip__video-wrap" >
-            <div class="presentation-clip__video-container">
-              <img class="presentation-clip__video" src="./img/catalog-cards/video-mobile.jpg" alt="Видеопрезентация.">
+          </section>
+          <div class="presentation-clip">
+            <div class="presentation-clip__description">
+              <h3 class="presentation-clip__title">Все еще сомневаетесь?</h3>
+              <p class="presentation-clip__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
             </div>
-            <button class="presentation-clip__video-play" type="button"></button>
+            <div class="presentation-clip__video-wrap" >
+              <div class="presentation-clip__video-container">
+                <picture>
+                  <source media="(min-width: 1200px)" type="image/webp" srcset="../img/presentation/video-desktop.webp 1x, ../img/presentation/video-desktop@2x.webp 2x">
+                  <source media="(min-width: 1200px)" type="image/png" srcset="../img/presentation/video-desktop.png 1x, ../img/presentation/video-desktop@2x.png 2x">
+                  <source media="(min-width: 1200px)" type="image/jpg" srcset="../img/presentation/video-desktop.jpg 1x, ../img/presentation/video-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="../img/presentation/video-tablet.webp 1x, ../img/presentation/video-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" type="image/png" srcset="../img/presentation/video-tablet.png 1x, ../img/presentation/video-tablet@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/jpg" srcset="../img/presentation/video-tablet.jpg 1x, ../img/presentation/video-tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="../img/presentation/video-mobile.webp 1x, ../img/presentation/video-mobile@2x.webp 2x">
+                  <source type="image/png" srcset="../img/presentation/video-mobile.png 1x, ../img/presentation/video-mobile@2x.png 2x">
+                  <img class="presentation-clip__video" src="../img/presentation/video-mobile.jpg" srcset="../img/presentation/video-mobile@2x.jpg" alt="Видеопрезентация.">
+                </picture>
+              </div>
+              <button class="presentation-clip__video-play" type="button"></button>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
-<!--  footer -->
-    <footer class="footer">
-      <p class="footer__hashtag">#visitSEDONA</p>
-      <div class="footer__social-icon social-icon">
-        <a class="social-icon__link social-icon__link--vk" href="#">
-          <span class="visually-hidden">Вконтакте</span>
+      </main>
+<!--    footer -->
+      <footer class="footer">
+        <p class="footer__hashtag">#visitSEDONA</p>
+        <div class="footer__social-icon social-icon">
+          <a class="social-icon__link social-icon__link--vk" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+          <a class="social-icon__link social-icon__link--telegram" href="#">
+            <span class="visually-hidden">Телеграм</span>
+          </a>
+          <a class="social-icon__link social-icon__link--youtube" href="#">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </div>
+        <a class="footer__copyright-link copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="сайт HTML Academy">
+          <span class="copyright__text">разработано</span>
+          <svg class="copyright__html-logo" width="27" height="35">
+            <use xlink:href="../img/sprite.svg#html-academy-logo"></use>
+          </svg>
         </a>
-        <a class="social-icon__link social-icon__link--telegram" href="#">
-          <span class="visually-hidden">Телеграм</span>
-        </a>
-        <a class="social-icon__link social-icon__link--youtube" href="#">
-          <span class="visually-hidden">Твиттер</span>
-        </a>
-      </div>
-      <a class="footer__copyright copyright" href="#">
-        <span class="copyright__text">разработано</span>
-        <img src="./img/footer/htmlacademy-1.svg" alt="Логотип htmlacademy.">
-      </a>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

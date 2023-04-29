@@ -1,0 +1,135 @@
+.nav {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+  &--nojs {
+    position: static;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1200px;
+  }
+}
+
+.nav__toogle {
+  position: absolute;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.nav__list {
+  position: relative;
+  top: 0;
+  z-index: 3;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    position: inherit;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.nav__item {
+  width: 100%;
+  background-color: #81b3d2;
+
+  border-bottom: 1px solid rgba(0, 0%, 0%, 0.2);
+
+
+  @media (min-width: @tablet-width) {
+    max-width: calc(100% / 5);
+
+    background-color: #ffffff;
+    border: none;
+
+    &:nth-child(4n+2) {
+      margin-right: calc(100% / 5);
+    }
+  }
+}
+
+.nav__link {
+  display: block;
+  padding: 17px 0 12px 0;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #ffffff;
+
+  &:focus-within {
+    outline-offset: -1px;
+  }
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+
+    color: #000000;
+
+    &:hover {
+      background-color: inherit;
+      color: #669ec0;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &--active {
+    color: #766357;
+  }
+}
+
+.nav--open .nav__toogle,
+.nav--close .nav__toogle {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+  z-index: 6;
+  display: block;
+  width: 23px;
+  height: 22px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/header/icon-menu-close.svg");
+  cursor: pointer;
+}
+
+.nav--close .nav__toogle {
+  background-image: url("../img/header/icon-menu.svg");
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.nav--close .nav__list {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}

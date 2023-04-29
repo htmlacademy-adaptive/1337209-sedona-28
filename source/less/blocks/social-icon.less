@@ -4,9 +4,52 @@
 }
 
 .social-icon__link {
+  position: relative;
+
   display: block;
   width: 48px;
   height: 48px;
 
   background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-repeat: no-repeat;
+  }
+
+  &--vk::before {
+    width: 24px;
+    height: 14px;
+    background-image: url("../img/social-icon/icon-vk.svg");
+  }
+
+  &--telegram::before {
+    width: 21px;
+    height: 18px;
+    background-image: url("../img/social-icon/icon-telegram.svg");
+  }
+
+  &--youtube::before {
+    width: 20px;
+    height: 14px;
+    background-image: url("../img/social-icon/icon-youtube.svg");
+  }
 }

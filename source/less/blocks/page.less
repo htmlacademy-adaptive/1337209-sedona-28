@@ -3,16 +3,36 @@
 }
 
 .page__body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 320px;
-  width: 100%;
   min-height: 100vh;
-  margin: 0;
+  margin: 0 auto;
 
   font-family: "ptsans", sans-serif;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    background-color: #e7e5e5;
+  }
+}
+
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  width: 100%;
+
+  @media (min-width: @desktop-width) {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+  }
 }

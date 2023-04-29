@@ -3,14 +3,11 @@
   padding: 24px 20px;
 
   border-top: 1px solid #e5e5e5;
-}
 
-.card__image {
-  display: block;
-  width: 100%;
-  margin-bottom: 15px;
-  min-height: 284px;
-  object-fit: cover;
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .card__image-link {
@@ -19,8 +16,47 @@
   color: #000000;
 }
 
+.card__image {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  min-height: 284px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.card__info {
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px 15px 20px;
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 25px;
+
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
 .card__description {
   margin-bottom: 11px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .card__heading {
@@ -33,5 +69,16 @@
 }
 
 .card__count {
+  position: relative;
+  font-weight: 700;
   margin: 0;
+}
+
+.card__like-icon {
+  fill: rgba(0, 0, 0, 0.3);
+  margin-right: 9px;
+
+  @media (min-width: @desktop-width) {
+    fill: #ffffff;
+  }
 }
