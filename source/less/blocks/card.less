@@ -87,8 +87,19 @@
   fill: rgba(0, 0, 0, 0.3);
   margin-right: 9px;
   cursor: pointer;
+  outline: none;
 
   @media (min-width: @desktop-width) {
     fill: #ffffff;
   }
+
+  &:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+
+    @media (min-width: @desktop-width) {
+      outline: 2px solid #ffffff;
+    }
+  }
 }
+
