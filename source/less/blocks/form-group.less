@@ -159,6 +159,15 @@
 
   background-color: #f2f2f2;
   border: none;
+  outline: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: #ffffff;
+  }
 }
 
 .form-group__container:last-child .form-group__input {
@@ -166,14 +175,13 @@
 }
 
 .form-group__input:focus-visible {
-  outline: 2px solid #000000;
+  outline: 2px solid #e5e5e5;
 }
 
 .form-group__input::placeholder {
   color: #000000;
   opacity: 0.3;
 }
-
 
 .form-group__input-email {
   position: relative;

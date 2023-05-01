@@ -14,6 +14,9 @@
           <img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип.">
         </a>
         <!-- navigation -->
+        <!-- nav--open открывает меню  -->
+        <!-- nav--close закрывает меню -->
+        <!-- nav--nojs работа меню без js -->
         <nav class="header__nav nav nav--nojs">
           <button class="nav__toogle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -23,7 +26,7 @@
               <a class="nav__link" href="index.html">Главная</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link nav__link--active" href="catalog.html">Фото и видео</a>
+              <a class="nav__link nav__link--active">Фото и видео</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="form.html">Форма Отзыва</a>
@@ -60,20 +63,21 @@
                         <source type="image/png" srcset="../img/catalog-cards/mobile-cards-1.png 1x, ../img/catalog-cards/mobile-cards-1@2x.png 2x">
                       <img class="card__image" src="../img/catalog-cards/mobile-cards-1.jpg" srcset="../img/catalog-cards/mobile-cards-1@2x.jpg" alt="Фото, неродные просторы." >
                     </picture>
-                  <div class="card__info">
-                    <div class="card__description">
-                      <h3 class="card__heading">Неродные просторы</h3>
-                      <p class="card__author">Автор фото: Борис</p>
-                    </div>
-
-                      <p class="card__count">
-                        <svg class="card__like-icon" width="23" height="21">
-                          <use xlink:href="../img/sprite.svg#like"></use>
-                        </svg>
-                        1350
-                      </p>
-                  </div>
                 </a>
+                <div class="card__info">
+                  <div class="card__description">
+                    <a class="card__description-link" href="#">
+                      <h3 class="card__heading">Неродные просторы</h3>
+                    </a>
+                    <p class="card__author">Автор фото: Борис</p>
+                  </div>
+                    <p class="card__count">
+                      <svg class="card__like-icon" width="23" height="21" tabindex="0" aria-label="лайк фотографии неродные просторы.">
+                        <use xlink:href="../img/sprite.svg#like"></use>
+                      </svg>
+                      1350
+                    </p>
+                </div>
               </div>
               <div class="catalog-cards__card card">
                 <a class="card__image-link" href="#">
@@ -88,19 +92,21 @@
                     <source type="image/png" srcset="../img/catalog-cards/mobile-cards-2.png 1x, ../img/catalog-cards/mobile-cards-2@2x.png">
                     <img class="card__image" src="../img/catalog-cards/mobile-cards-2.jpg" srcset="../img/catalog-cards/mobile-cards-2@2x.jpg" alt="Фото, местная растительность." >
                   </picture>
+                </a>
                 <div class="card__info">
                   <div class="card__description">
-                    <h3 class="card__heading">Местная растительность</h3>
+                    <a class="card__description-link" href="#">
+                      <h3 class="card__heading">Местная растительность</h3>
+                    </a>
                     <p class="card__author">Автор фото: Сергей</p>
                   </div>
                     <span class="card__count">
-                      <svg class="card__like-icon" width="23" height="21">
+                      <svg class="card__like-icon" width="23" height="21" tabindex="0" aria-label="лайк фотографии местная растительность.">
                         <use xlink:href="../img/sprite.svg#like"></use>
                       </svg>
                       143
                     </span>
                 </div>
-              </a>
               </div>
               <div class="catalog-cards__card card">
                 <a class="card__image-link" href="#">
@@ -115,19 +121,21 @@
                     <source type="image/png" srcset="../img/catalog-cards/mobile-cards-3.png 1x, ../img/catalog-cards/mobile-cards-3@2x.png">
                     <img class="card__image" src="../img/catalog-cards/mobile-cards-3.jpg" srcset="../img/catalog-cards/mobile-cards-3@2x.jpg" alt="Фото, дорога на север." >
                   </picture>
-                  <div class="card__info">
-                    <div class="card__description">
-                      <h3 class="card__heading">Дорога на север</h3>
-                      <p class="card__author">Автор фото: Пётр</p>
-                    </div>
-                      <p class="card__count">
-                        <svg class="card__like-icon" width="23" height="21">
-                          <use xlink:href="../img/sprite.svg#like"></use>
-                        </svg>
-                        96
-                      </p>
-                  </div>
                 </a>
+                <div class="card__info">
+                  <div class="card__description">
+                    <a class="card__description-link" href="#">
+                      <h3 class="card__heading">Дорога на север</h3>
+                    </a>
+                    <p class="card__author">Автор фото: Пётр</p>
+                  </div>
+                    <p class="card__count">
+                      <svg class="card__like-icon" width="23" height="21" tabindex="0" aria-label="лайк фотографии дорога на север.">
+                        <use xlink:href="../img/sprite.svg#like"></use>
+                      </svg>
+                      96
+                    </p>
+                </div>
               </div>
               <div class="catalog-cards__card card">
                 <a class="card__image-link" href="#">
@@ -142,19 +150,21 @@
                     <source type="image/png" srcset="../img/catalog-cards/mobile-cards-4.png 1x, ../img/catalog-cards/mobile-cards-4@2x.png">
                     <img class="card__image" src="../img/catalog-cards/mobile-cards-4.jpg" srcset="../img/catalog-cards/mobile-cards-4@2x.jpg" alt="Фото, Мост дьявола в Седоне." >
                   </picture>
-                  <div class="card__info">
-                    <div class="card__description">
-                      <h3 class="card__heading">Мост дьявола</h3>
-                      <p class="card__author">Автор фото: Антон</p>
-                    </div>
-                    <p class="card__count">
-                      <svg class="card__like-icon" width="23" height="21">
-                        <use xlink:href="../img/sprite.svg#like"></use>
-                      </svg>
-                      254
-                    </p>
-                  </div>
                 </a>
+                <div class="card__info">
+                  <div class="card__description">
+                    <a class="card__description-link" href="#">
+                      <h3 class="card__heading">Мост дьявола</h3>
+                    </a>
+                    <p class="card__author">Автор фото: Антон</p>
+                  </div>
+                  <p class="card__count">
+                    <svg class="card__like-icon" width="23" height="21" tabindex="0" aria-label="лайк фотографии мост дьявола.">
+                      <use xlink:href="../img/sprite.svg#like"></use>
+                    </svg>
+                    254
+                  </p>
+                </div>
               </div>
             </div>
           </section>

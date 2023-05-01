@@ -101,6 +101,10 @@
   &--active {
     color: #766357;
   }
+
+  &--active:hover {
+    color: #766357;
+  }
 }
 
 .nav--open .nav__toogle,
@@ -121,9 +125,20 @@
 .nav--close .nav__toogle {
   background-image: url("../img/header/icon-menu.svg");
 
+
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.nav__toogle:hover {
+  background-color: transparent;
+  opacity: 0.6;
+}
+
+.nav__toogle:active {
+  background-color: transparent;
+  opacity: 0.3;
 }
 
 .nav--close .nav__list {
