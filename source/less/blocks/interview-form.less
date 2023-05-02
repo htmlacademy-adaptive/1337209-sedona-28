@@ -62,64 +62,48 @@
   font-size: 21px;
 
   @media (min-width: @tablet-width) {
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-
-      margin: auto;
-      width: 123px;
-      height: 1px;
-
-      background-color: #dbdbdb;
-    }
-
+    &::after,
     &::before {
       content: "";
       position: absolute;
-      right: 0;
       top: 0;
       bottom: 0;
-
       margin: auto;
       width: 123px;
       height: 1px;
-
       background-color: #dbdbdb;
+    }
+
+    &::after {
+      left: 0;
+    }
+
+    &::before {
+      right: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 45px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-
-      margin: auto;
-      width: 280px;
-      height: 1px;
-
-      background-color: #dbdbdb;
-    }
-
+    &::after,
     &::before {
       content: "";
       position: absolute;
-      right: 0;
       top: 0;
       bottom: 0;
-
+      margin: auto;
       width: 280px;
       height: 1px;
-      margin: auto;
-
       background-color: #dbdbdb;
+    }
+
+    &::after {
+      left: 0;
+    }
+
+    &::before {
+      right: 0;
     }
 
     &--attractions {
@@ -142,29 +126,19 @@
   padding-left: 62px;
   cursor: pointer;
 
+  &::after,
   &::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-
     width: 46px;
     height: 46px;
     margin: auto;
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-
-    width: 46px;
-    height: 46px;
-    margin: auto;
-
     background-color: #f2f2f2;
     border-radius: 50%;
   }
@@ -187,11 +161,9 @@
 .interview-form__radio-input {
   position: absolute;
   z-index: -1;
-
   width: 46px;
   height: 46px;
   margin: 0;
-
   opacity: 0;
 
   &:focus-visible + .interview-form__radio-label::before {
@@ -226,49 +198,33 @@
 .interview-form__checkbox-label {
   box-sizing: border-box;
   position: relative;
-
   display: flex;
   align-items: center;
   min-height: 46px;
   padding-left: 62px;
-
   font-size: 18px;
   font-weight: 700;
   text-transform: none;
   cursor: pointer;
 
+  &::after,
   &::before {
     content: "";
-
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-
     width: 46px;
     height: 46px;
     margin: auto;
+  }
 
+  &::before {
     background-color: #f2f2f2;
   }
 
-  &:hover::before {
-    background-color: #e5e5e5;
-  }
-
   &::after {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-
     display: none;
-    width: 46px;
-    height: 46px;
-    margin: auto;
-
     background-image: url("../img/form/tick.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -276,6 +232,10 @@
 
   &:active::after {
     opacity: 0.3;
+  }
+
+  &:hover::before {
+    background-color: #e5e5e5;
   }
 
   &:active::before {

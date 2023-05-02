@@ -1,7 +1,6 @@
 .form-group {
   margin: 0;
   padding: 0;
-
   border: none;
   border-top: 1px solid #e5e5e5;
 
@@ -16,7 +15,6 @@
       right: -29px;
       top: -8px;
       bottom: 0;
-
       margin: auto;
       border-right: 1px solid #dbdbdb;
       min-height: 338px;
@@ -25,14 +23,8 @@
 
   @media (min-width: @desktop-width) {
     &:first-child::before {
-      content: "";
-      position: absolute;
       right: -49.5px;
-      top: 0;
-      bottom: 0;
-      margin: auto;
       min-height: 338px;
-      border-right: 1px solid #dbdbdb;
     }
   }
 }
@@ -67,32 +59,25 @@
     font-size: 21px;
 
     @media (min-width: @tablet-width) {
-      &::after {
+      &::after,
+      &::before {
         content: "";
         position: absolute;
-        left: 0;
         top: 0;
         bottom: 0;
-
         margin: auto;
         width: 123px;
         height: 1px;
-
         background-color: #dbdbdb;
+      }
+
+      &::after {
+        left: 0;
       }
 
       &::before {
         content: "";
-        position: absolute;
         right: 0;
-        top: 0;
-        bottom: 0;
-
-        margin: auto;
-        width: 123px;
-        height: 1px;
-
-        background-color: #dbdbdb;
       }
     }
 
@@ -100,31 +85,11 @@
       margin-bottom: 45px;
 
       &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-
-        margin: auto;
         width: 280px;
-        height: 1px;
-
-        background-color: #dbdbdb;
       }
 
       &::before {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-
         width: 280px;
-        height: 1px;
-        margin: auto;
-
-        background-color: #dbdbdb;
       }
 
       &--attractions {
@@ -141,22 +106,18 @@
 .form-group__label {
   display: block;
   padding-left: 16px;
-
   color: #333333;
 }
 
 .form-group__input {
   box-sizing: border-box;
-
   width: 100%;
   min-height: 58px;
   padding: 0;
   padding-left: 16px;
   margin-bottom: 16px;
-
   font-size: 18px;
   font-weight: 700;
-
   background-color: #f2f2f2;
   border: none;
   outline: none;
@@ -192,7 +153,6 @@
     right: 0;
     width: 58px;
     height: 58px;
-
     background: #e6e6e6 url("../img/form/email.svg") no-repeat 50%;
   }
 }
@@ -204,10 +164,8 @@
     content: "";
     position: absolute;
     right: 0;
-
     width: 58px;
     height: 58px;
-
     background: #e6e6e6 url("../img/form/phone.svg") no-repeat 50%;
   }
 }
