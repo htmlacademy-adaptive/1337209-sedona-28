@@ -59,6 +59,15 @@
   }
 }
 
+.card__description-link {
+  text-decoration: none;
+  color: #000000;
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
+}
+
 .card__heading {
   margin-top: 0;
   margin-bottom: 11px;
@@ -77,8 +86,19 @@
 .card__like-icon {
   fill: rgba(0, 0, 0, 0.3);
   margin-right: 9px;
+  cursor: pointer;
+  outline: none;
 
   @media (min-width: @desktop-width) {
     fill: #ffffff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+
+    @media (min-width: @desktop-width) {
+      outline: 2px solid #ffffff;
+    }
   }
 }
