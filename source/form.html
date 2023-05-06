@@ -88,7 +88,7 @@
               </div>
               <fieldset class="form-group interview-form">
                 <div class="interview-form__inner">
-                  <div class="interview-form__title-wrap">
+                  <div class="form-group__title-wrap">
                     <h3 class="form-group__title interview-form__title">Ваше общее впечатление:</h3>
                   </div>
                   <div class="interview-form__list">
@@ -109,8 +109,10 @@
               </fieldset>
               <fieldset class="form-group interview-form">
                 <div class="interview-form__inner">
-                  <h3 class="form-group__title interview-form__title interview-form__title--attractions">посещенные<br>достопримечательности:</h3>
-                  <div class="interview-form__list">
+                  <div class="form-group__title-wrap">
+                    <h3 class="form-group__title interview-form__title interview-form__title--attractions">посещенные<br>достопримечательности:</h3>
+                  </div>
+                  <div class="interview-form__list interview-form__list--attractions">
                     <div class="interview-form__item">
                       <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="devil-bridge" value="devil-bridge" checked>
                       <label class="interview-form__checkbox-label" for="devil-bridge">Мост Дьявола</label>
@@ -131,8 +133,10 @@
                 </div>
               </fieldset>
               <fieldset class="form-group comment-emotions">
-                <div class="form-group__inner form-group__inner--comment">
-                  <h3 class="form-group__title form-group__title--emotions">Опишите свои эмоции:</h3>
+                <div class="comment-emotions__inner comment-emotions__inner--comment">
+                  <div class="form-group__title-wrap">
+                    <h3 class="form-group__title form-group__title--emotions">Опишите свои эмоции:</h3>
+                  </div>
                   <div class="comment-emotions__wrap">
                     <textarea class="comment-emotions__message" name="emotions" cols="30" rows="10" id="comment-message" placeholder="Опишите подробно все свои восторги"></textarea>
                     <label class="comment-emotions__label" for="comment-message"></label>
@@ -162,8 +166,8 @@
         </div>
         <a class="footer__copyright-link copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="сайт HTML Academy">
           <span class="copyright__text">разработано</span>
-          <svg class="copyright__html-logo" width="27" height="35">
-            <use xlink:href="../img/sprite.svg#html-academy-logo"></use>
+          <svg class="copyright__html-logo" width="27" height="35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.65.45h-.1L.05 1.85v24.7l13.5 8 13.4-8V1.85L13.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z" fill="currentColor"/>
           </svg>
         </a>
       </footer>

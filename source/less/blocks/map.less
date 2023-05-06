@@ -2,6 +2,21 @@
   position: relative;
   z-index: 1;
   background-color: #aac9a5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 211;
+    width: 27px;
+    height: 27px;
+    background: url("../img/map/map-marker.svg") no-repeat;
+    cursor: pointer;
+  }
 }
 
 .map__video {
