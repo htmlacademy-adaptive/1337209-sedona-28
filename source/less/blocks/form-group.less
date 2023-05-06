@@ -32,16 +32,13 @@
 .form-group__inner {
   padding: 24px 20px 39px;
 
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &--contact {
     padding-bottom: 34px;
-  }
-
-  &--comment {
-    padding-bottom: 0;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
   }
 }
 
@@ -49,53 +46,55 @@
   min-width: 240px;
 }
 
+.form-group__title-wrap {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 123px;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+
+    &::before {
+      content: "";
+      right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after,
+    &::before {
+      width: 280px;
+    }
+  }
+}
+
 .form-group__title {
-  text-align: center;
+  margin: 0 auto;
   margin-top: 0;
   margin-bottom: 28px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    max-width: 315px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 320px;
+  }
 
   &--emotions {
     position: relative;
     font-size: 21px;
 
-    @media (min-width: @tablet-width) {
-      &::after,
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        width: 123px;
-        height: 1px;
-        background-color: #dbdbdb;
-      }
-
-      &::after {
-        left: 0;
-      }
-
-      &::before {
-        content: "";
-        right: 0;
-      }
-    }
-
     @media (min-width: @desktop-width) {
-      margin-bottom: 45px;
-
-      &::after {
-        width: 280px;
-      }
-
-      &::before {
-        width: 280px;
-      }
-
-      &--attractions {
-        margin-bottom: 59px;
-      }
-
       &--emotions {
         margin-bottom: 28px;
       }

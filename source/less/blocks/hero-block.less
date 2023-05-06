@@ -2,14 +2,37 @@
   position: relative;
   width: 100%;
   min-height: 389px;
+  padding-bottom: 1px;
   overflow: hidden;
-  padding-bottom: 2px;
   background: #a6cff0 url("../img/hero-block/tablet-back-index@1x.webp") no-repeat top;
   background-size: cover;
+
+  &::after,
+  &::before {
+    content: "";
+    bottom: 0;
+    position: absolute;
+    width: 600px;
+    height: 57px;
+    // -webkit-mask-image: url("../img/stack.svg#triangle");
+    mask-image: url("../img/stack.svg#triangle");
+    background-color: #ffffff;
+  }
+
+  &::after {
+    bottom: -1px;
+    left: 50%;
+    transform: scaleX(-1);
+  }
+
+  &::before {
+    right: 50%;
+  }
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/hero-block/tablet-back-index@1x.webp") center;
     min-height: 518px;
+    padding-bottom: 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-block/tablet-back-index@2x.webp");
@@ -30,6 +53,7 @@
     position: relative;
     width: 100%;
     min-height: 158px;
+    padding-bottom: 0;
     background: #a6cff0 url("../img/hero-block/tablet-back-index@1x.webp") no-repeat bottom;
 
     @media (min-width: @tablet-width) {
@@ -51,29 +75,6 @@
       }
     }
   }
-}
-
-.hero-block::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  width: 600px;
-  height: 57px;
-  background-image: url("../img/hero-block/hero-triangle.svg");
-  background-repeat: no-repeat;
-}
-
-.hero-block::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 600px;
-  height: 57px;
-  transform: scaleX(-1);
-  background-image: url("../img/hero-block/hero-triangle.svg");
-  background-repeat: no-repeat;
 }
 
 .hero-block__photo {

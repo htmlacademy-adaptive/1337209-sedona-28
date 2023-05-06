@@ -19,9 +19,21 @@
   }
 }
 
+.comment-emotions__inner {
+  padding: 24px 20px 31px;
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 0 0;
+  }
+
+  &--comment {
+    padding-bottom: 0;
+  }
+}
+
 .comment-emotions__button {
   display: block;
-  padding: 16px 0;
+  padding: 16px 20px;
   font-size: 21px;
   border: none;
 
@@ -36,12 +48,6 @@
 
 .comment-emotions__button-wrap {
   @media (min-width: @tablet-width) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  @media (min-width: @desktop-width) {
     display: flex;
     align-items: center;
     justify-content: space-between;
