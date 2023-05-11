@@ -9,7 +9,9 @@ import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
 import { deleteAsync } from 'del';
+
 
 // Styles
 
@@ -61,10 +63,19 @@ const createWebp = () => {
 // SVG
 
 const svg = () => {
-  return gulp.src('source/img/**/*.svg')
+  return gulp.src('source/img/**/*.svg', '!source/img/stack-icon/*.svg')
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 }
+
+// const stack = () => {
+//   return gulp.src('source/img/stack-icon/*.svg')
+//   .pipe(svgo())
+//   .pipe(svgstore( {
+//     inlineSvg: true
+//   }))
+//   .pipe(gulp.dest('build/img'));
+// }
 
 // Copy
 
@@ -110,7 +121,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
