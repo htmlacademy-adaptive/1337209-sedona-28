@@ -1,6 +1,14 @@
 .recommendations {
-  padding: 24px 18px 46px 18px;
+  padding: 33px 18px 46px 18px;
   text-align: left;
+
+  & br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -11,42 +19,46 @@
 .recommendations__list {
   display: flex;
   flex-direction: column;
-  column-gap: 33px;
+  // column-gap: 33px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
     min-height: 210px;
-    padding: 60px 0;
+    padding: 60px 0 28px;
   }
 
   @media (min-width: @desktop-width) {
     gap: 0;
+    padding: 73px 0 37px;
     text-align: center;
   }
 }
 
 .recommendations__item {
   font-size: 14px;
-  letter-spacing: 0.02em;
-  flex-grow: 1;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    align-items: center;
-    padding: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 50px;
+    align-items: top;
+    max-width: 100%;
+    width: calc(100% / 3);
   }
 
   &:last-child .recommendations__text {
     margin: 0;
+  }
+}
+
+.recommendations__text {
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
   }
 }
 
@@ -56,31 +68,33 @@
 
   @media (min-width: @tablet-width) {
     max-width: 190px;
+    margin: 0 auto;
     padding: 0;
-    padding-top: 106px;
+    padding-top: 95px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 300px;
   }
-}
 
-.recommendations__item-container::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 39px;
-  height: 36px;
-  background: url("../img/recomendation/mobile-icon-house.svg") no-repeat center;
-
-  @media (min-width: @tablet-width) {
-    width: 77px;
-    height: 72px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
     left: 0;
-    right: 0;
-    top: 0;
-    margin: auto;
-    background: url("../img/recomendation/desktop-icon-house.svg") no-repeat center;
+    width: 39px;
+    height: 36px;
+    background: url("../img/recomendation/mobile-icon-house.svg") no-repeat center;
+
+    @media (min-width: @tablet-width) {
+      width: 77px;
+      height: 72px;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: auto;
+      background: url("../img/recomendation/desktop-icon-house.svg") no-repeat center;
+    }
   }
 }
 
@@ -111,7 +125,7 @@
 
   @media (min-width: @tablet-width) {
     width: 76px;
-    height: 75px;
+    height: 80px;
     left: 0;
     right: 0;
     top: 0;
@@ -122,8 +136,13 @@
 
 .recommendations__title {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+    font-size: 21px;
+  }
 }

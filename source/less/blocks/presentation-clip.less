@@ -1,17 +1,15 @@
 .presentation-clip {
-  padding: 17px 20px 0 20px;
+  padding: 20px 20px 0;
   border-top: 1px solid #e5e5e5;
+  margin-bottom: -4px;
 
   @media (min-width: @tablet-width) {
-    padding: 58px 60px;
-    padding-bottom: 40px;
+    padding: 58px 60px 38px;
     border: none;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 199px;
-    padding-right: 199px;
-    padding-bottom: 84px;
+    padding: 61px 199px 80px;
   }
 }
 
@@ -44,14 +42,20 @@
   @media (min-width: @tablet-width) {
     max-width: 445px;
     margin: 0 auto;
-    padding-bottom: 66px;
+    padding-bottom: 89px;
   }
 }
 
 .presentation-clip__title {
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   text-align: center;
+  font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 35px;
+    font-size: 30px;
+  }
 }
 
 .presentation-clip__text {

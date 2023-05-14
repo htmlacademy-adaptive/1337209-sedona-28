@@ -14,7 +14,7 @@
       position: absolute;
       right: -29px;
       top: -8px;
-      bottom: 0;
+      bottom: 33px;
       margin: auto;
       border-right: 1px solid #dbdbdb;
       min-height: 338px;
@@ -30,11 +30,18 @@
 }
 
 .form-group__inner {
-  padding: 24px 20px 39px;
+  padding: 26px 20px 39px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 5px 0 39px;
+  }
+
+  & h3 {
+    font-size: 18px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 21px;
+    }
   }
 
   &--contact {
@@ -77,22 +84,28 @@
 }
 
 .form-group__title {
-  margin: 0 auto;
+  margin: 0 auto 23px;
   margin-top: 0;
-  margin-bottom: 28px;
+
   text-align: center;
 
   @media (min-width: @tablet-width) {
     max-width: 315px;
+    margin-bottom: 28px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 320px;
+    margin-bottom: 30px;
   }
 
   &--emotions {
     position: relative;
-    font-size: 21px;
+    font-size: 18px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 21px;
+    }
 
     @media (min-width: @desktop-width) {
       &--emotions {
@@ -115,6 +128,7 @@
   padding: 0;
   padding-left: 16px;
   margin-bottom: 16px;
+  font-family: "ptsans", sans-serif;
   font-size: 18px;
   font-weight: 700;
   background-color: #f2f2f2;
