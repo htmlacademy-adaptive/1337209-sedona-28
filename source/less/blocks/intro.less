@@ -12,7 +12,7 @@
 .intro__heading {
   margin-top: 0;
   margin-bottom: 35px;
-  font-family: sans-serif;
+  font-family: "ptsans", sans-serif;
   text-align: center;
   font-size: 18px;
   font-weight: 700;
@@ -20,6 +20,21 @@
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
+  }
+
+  &--index {
+    @media (min-width: @tablet-width) {
+      font-size: 21px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &--bottom {
+    margin-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 31px;
+    }
   }
 }
 
@@ -29,12 +44,6 @@
   font-size: 14px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 7px;
-  }
-}
-
-.intro__heading--index {
-  @media (min-width: @tablet-width) {
-    font-size: 21px;
+    padding: 0 9px;
   }
 }

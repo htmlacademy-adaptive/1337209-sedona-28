@@ -17,14 +17,20 @@
 
 .search-hotel__heading {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 21px;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-bottom: 33px;
+  }
 }
 
 .search-hotel__text {
   margin-bottom: 32px;
+  margin-top: 0;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -58,6 +64,12 @@
 
 .search-hotel__map {
   min-height: 350px;
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 458px;
+    margin-bottom: 0;
+  }
 
   @media (min-width: @desktop-width) {
     max-width: 1200px;

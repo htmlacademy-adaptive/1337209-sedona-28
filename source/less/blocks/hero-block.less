@@ -1,4 +1,5 @@
 .hero-block {
+  box-sizing: border-box;
   position: relative;
   width: 100%;
   min-height: 389px;
@@ -10,9 +11,9 @@
   &::after,
   &::before {
     content: "";
-    bottom: 0;
     position: absolute;
-    width: 600px;
+    bottom: -1px;
+    width: 603px;
     height: 57px;
     // -webkit-mask-image: url("../img/stack.svg#triangle");
     mask-image: url("../img/stack.svg#triangle");
@@ -57,19 +58,22 @@
     background: #a6cff0 url("../img/hero-block/tablet-back-index@1x.webp") no-repeat bottom;
 
     @media (min-width: @tablet-width) {
-      min-height: 290px;
+      min-height: 288px;
       background-size: cover;
 
       @media (min-resolution: 2dppx) {
-        background: #a6cff0 url("../img/hero-block/tablet-back-index@2x.webp");
+        min-height: 288px;
+        background: #a6cff0 url("../img/hero-block/tablet-back-index@2x.webp") bottom;
         background-size: cover;
       }
     }
 
     @media (min-width: @desktop-width) {
+      min-height: 301px;
       background: #a6cff0 url("../img/hero-block/desktop-back-index@1x.webp") no-repeat bottom;
 
       @media (min-resolution: 2dppx) {
+        min-height: 301px;
         background: #a6cff0 url("../img/hero-block/desktop-back-index@2x.webp") bottom;
         background-size: cover;
       }
@@ -85,7 +89,7 @@
 
 .hero-block__img-text {
   position: absolute;
-  top: 0;
+  top: 4px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -93,6 +97,25 @@
 
   @media (min-width: @tablet-width) {
     width: 460px;
+    top: -17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -12px;
+  }
+
+  &--r {
+    top: -14px;
+
+    @media (min-width: @tablet-width) {
+      top: -23px;
+      left: 2px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -20px;
+      left: -4px;
+    }
   }
 
   &--change {

@@ -4,12 +4,13 @@ import less from 'gulp-less';
 import csso from 'postcss-csso';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
+import { stacksvg } from 'gulp-stacksvg';
 import rename from 'gulp-rename';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
 import { deleteAsync } from 'del';
 
 
@@ -33,6 +34,14 @@ const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
+}
+
+// Scripts
+
+const script = () => {
+  return gulp.src('/source/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'));
 }
 
 // Images
@@ -68,14 +77,12 @@ const svg = () => {
   .pipe(gulp.dest('build/img'));
 }
 
-// const stack = () => {
-//   return gulp.src('source/img/stack-icon/*.svg')
-//   .pipe(svgo())
-//   .pipe(svgstore( {
-//     inlineSvg: true
-//   }))
-//   .pipe(gulp.dest('build/img'));
-// }
+const createStack = () => {
+  return gulp.src('source/img/icon-stack/*.svg')
+  .pipe(svgo())
+  .pipe(stacksvg({ output: `stack` }))
+  .pipe(gulp.dest('build/img'));
+}
 
 // Copy
 
@@ -133,7 +140,9 @@ export const build = gulp.series(
   gulp.parallel(
     styles,
     html,
+    script,
     svg,
+    createStack,
     createWebp
   ),
 );
@@ -147,7 +156,9 @@ export default gulp.series(
   gulp.parallel(
     styles,
     html,
+    script,
     svg,
+    createStack,
     createWebp
   ),
   gulp.series(
