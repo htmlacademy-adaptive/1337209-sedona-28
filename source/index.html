@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preload" href="./css/style.min.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/ptsans.woff2" as="fonts" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/ptsansbold.woff2" as="fonts" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.min.css" />
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="../img/favicons/icon32.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
+    <link rel="icon" href="./img/favicons/icon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Седона</title>
   </head>
@@ -20,7 +23,7 @@
         <!-- nav--open открывает меню  -->
         <!-- nav--close закрывает меню -->
         <!-- nav--nojs работа меню без js -->
-        <nav class="header__nav nav nav--nojs nav--close">
+        <nav class="header__nav nav nav--close">
           <button class="nav__toogle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link nav__link--active">Главная</a></li>
