@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="./css/style.min.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="./css/style.min.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="../img/favicons/icon32.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
+    <link rel="icon" href="./img/favicons/icon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Седона</title>
   </head>
@@ -14,25 +17,36 @@
   <body class="page__body">
     <div class="page__wrapper">
       <header class="header">
-        <a class="header__logo" href="index.html"><img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип." /> </a>
+        <a class="header__logo" href="index.html"><img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип."></a>
         <!-- navigation -->
         <!-- nav--open открывает меню  -->
         <!-- nav--close закрывает меню -->
         <!-- nav--nojs работа меню без js -->
-        <nav class="header__nav nav nav--nojs nav--close">
-          <button class="nav__toogle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <nav class="header__nav nav nav--nojs">
+          <button class="nav__toogle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
-            <li class="nav__item"><a class="nav__link" href="catalog.html">Фото и видео</a></li>
-            <li class="nav__item"><a class="nav__link nav__link--active">Форма Отзыва</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">HTML ACADEMY</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="catalog.html">Фото и видео</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--active">Форма Отзыва</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">HTML ACADEMY</a>
+            </li>
           </ul>
         </nav>
       </header>
       <main class="main">
         <div class="main__wrap">
           <div class="hero-block hero-block--r">
-            <img class="hero-block__img-text hero-block__img-text--change hero-block__img-text--r" src="../img/hero-block/catalog-form/mobile-sedona.svg" alt="Добро пожаловать в Седону." /></div>
+            <img class="hero-block__img-text hero-block__img-text--change hero-block__img-text--r" src="../img/hero-block/catalog-form/mobile-sedona.svg" alt="Добро пожаловать в Седону.">
+          </div>
           <!-- feedback-form -->
           <section class="feedback">
             <div class="feedback__intro intro">
@@ -45,12 +59,13 @@
                   <fieldset class="form-group">
                     <div class="form-group__inner">
                       <h3 class="form-group__title">Представьтесь:</h3>
-                      <div class="form-group__container"><label class="form-group__label" for="name">Имя*:</label> <input class="form-group__input" type="text" name="name" id="name" placeholder="Введите имя" required /></div>
-                      <div class="form-group__container">
-                        <label class="form-group__label" for="surname">Фамилия*:</label> <input class="form-group__input" type="text" name="surname" id="surname" placeholder="Введите фамилию" required />
+                      <div class="form-group__container"><label class="form-group__label" for="name">Имя*:</label> <input class="form-group__input" type="text" name="name" id="name" placeholder="Введите имя" required>
                       </div>
                       <div class="form-group__container">
-                        <label class="form-group__label" for="patronymic">Отчество*:</label> <input class="form-group__input" type="text" name="patronymic" id="patronymic" placeholder="Введите отчество" />
+                        <label class="form-group__label" for="surname">Фамилия*:</label> <input class="form-group__input" type="text" name="surname" id="surname" placeholder="Введите фамилию" required>
+                      </div>
+                      <div class="form-group__container">
+                        <label class="form-group__label" for="patronymic">Отчество:</label> <input class="form-group__input" type="text" name="patronymic" id="patronymic" placeholder="Введите отчество">
                       </div>
                     </div>
                   </fieldset>
@@ -59,11 +74,13 @@
                       <h3 class="form-group__title">Контактная информация:</h3>
                       <div class="form-group__container">
                         <label class="form-group__label" for="telephon">Контактный телефон*:</label>
-                        <div class="form-group__input-phone"><input class="form-group__input form-group__input--place-icon" type="tel" name="telephon" id="telephon" placeholder="Введите телефон" required /></div>
+                        <div class="form-group__input-phone"><input class="form-group__input form-group__input--place-icon" type="tel" name="telephon" id="telephon" placeholder="Введите телефон" required>
+                        </div>
                       </div>
                       <div class="form-group__container">
                         <label class="form-group__label" for="e-mail">Электронная почта*:</label>
-                        <div class="form-group__input-email"><input class="form-group__input form-group__input--place-icon" type="email" name="email" id="e-mail" placeholder="Введите e-mail" required /></div>
+                        <div class="form-group__input-email"><input class="form-group__input form-group__input--place-icon" type="email" name="email" id="e-mail" placeholder="Введите e-mail" required>
+                        </div>
                       </div>
                     </div>
                   </fieldset>
@@ -76,13 +93,16 @@
                   </div>
                   <div class="interview-form__list">
                     <div class="interview-form__item">
-                      <input class="interview-form__radio-input" type="radio" name="impression" value="positive" id="positive" checked="checked" /> <label class="interview-form__radio-label" for="positive">Скорее положительное</label>
+                      <input class="interview-form__radio-input" type="radio" name="impression" value="positive" id="positive" checked="checked">
+                      <label class="interview-form__radio-label" for="positive">Скорее положительное</label>
                     </div>
                     <div class="interview-form__item">
-                      <input class="interview-form__radio-input" type="radio" name="impression" value="negative" id="negative" /> <label class="interview-form__radio-label" for="negative">Скорее отрицательное</label>
+                      <input class="interview-form__radio-input" type="radio" name="impression" value="negative" id="negative">
+                      <label class="interview-form__radio-label" for="negative">Скорее отрицательное</label>
                     </div>
                     <div class="interview-form__item">
-                      <input class="interview-form__radio-input" type="radio" name="impression" value="difficulty" id="difficulty" /> <label class="interview-form__radio-label" for="difficulty">Затрудняюсь ответить</label>
+                      <input class="interview-form__radio-input" type="radio" name="impression" value="difficulty" id="difficulty">
+                      <label class="interview-form__radio-label" for="difficulty">Затрудняюсь ответить</label>
                     </div>
                   </div>
                 </div>
@@ -91,24 +111,26 @@
                 <div class="interview-form__inner">
                   <div class="form-group__title-wrap">
                     <h3 class="form-group__title interview-form__title interview-form__title--attractions">
-                      посещенные<br />
+                      посещенные<br>
                       достопримечательности:
                     </h3>
                   </div>
                   <div class="interview-form__list interview-form__list--attractions">
                     <div class="interview-form__item">
-                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="devil-bridge" value="devil-bridge" checked="checked" />
+                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="devil-bridge" value="devil-bridge" checked="checked">
                       <label class="interview-form__checkbox-label" for="devil-bridge">Мост Дьявола</label>
                     </div>
                     <div class="interview-form__item">
-                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="bell-Mountain" value="bell-Mountain" checked="checked" />
+                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="bell-Mountain" value="bell-Mountain" checked="checked">
                       <label class="interview-form__checkbox-label" for="bell-Mountain">Гора-Колокол</label>
                     </div>
                     <div class="interview-form__item">
-                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="slide-Park" value="slide-Park" checked="checked" /> <label class="interview-form__checkbox-label" for="slide-Park">Слайд-парк</label>
+                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="slide-Park" value="slide-Park" checked="checked">
+                      <label class="interview-form__checkbox-label" for="slide-Park">Слайд-парк</label>
                     </div>
                     <div class="interview-form__item">
-                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="red-rocks" value="red-rocks" /> <label class="interview-form__checkbox-label" for="red-rocks">Красные скалы</label>
+                      <input class="interview-form__checkbox-input" type="checkbox" name="attractions" id="red-rocks" value="red-rocks">
+                      <label class="interview-form__checkbox-label" for="red-rocks">Красные скалы</label>
                     </div>
                   </div>
                 </div>
@@ -121,7 +143,9 @@
                   <div class="comment-emotions__wrap">
                     <textarea class="comment-emotions__message" name="emotions" cols="30" rows="10" id="comment-message" placeholder="Опишите подробно все свои восторги"></textarea>
                     <label class="comment-emotions__label" for="comment-message"></label>
-                    <div class="comment-emotions__button-wrap"><button class="comment-emotions__button button" type="submit">отправить отзыв</button> <span class="form__field-required">* — обязательные поля</span></div>
+                    <div class="comment-emotions__button-wrap"><button class="comment-emotions__button button" type="submit">отправить отзыв</button>
+                      <span class="form__field-required">* — обязательные поля</span>
+                    </div>
                   </div>
                 </div>
               </fieldset>
@@ -132,8 +156,15 @@
       <footer class="footer">
         <p class="footer__hashtag">#visitSEDONA</p>
         <div class="footer__social-icon social-icon">
-          <a class="social-icon__link social-icon__link--vk" href="#"><span class="visually-hidden">Вконтакте</span> </a><a class="social-icon__link social-icon__link--telegram" href="#"><span class="visually-hidden">Телеграм</span> </a>
-          <a class="social-icon__link social-icon__link--youtube" href="#"><span class="visually-hidden">Твиттер</span></a>
+          <a class="social-icon__link social-icon__link--vk" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+          <a class="social-icon__link social-icon__link--telegram" href="#">
+            <span class="visually-hidden">Телеграм</span>
+          </a>
+          <a class="social-icon__link social-icon__link--youtube" href="#">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
         </div>
         <a class="footer__copyright-link copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="сайт HTML Academy">
           <span class="copyright__text">разработано</span>
@@ -154,7 +185,9 @@
           <h3 class="modal__heading">что-то пошло не так</h3>
           <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         </div>
-        <div class="modal__footer"><button class="modal__button button" type="button">ок</button></div>
+        <div class="modal__footer">
+          <button class="modal__button button" type="button">ок</button>
+        </div>
       </div>
       <!--открытие м.о. при успешном заполнении (modal__container--complete) -->
       <div class="modal__container">
@@ -162,7 +195,9 @@
           <h3 class="modal__heading">Ваш отзыв отправлен!</h3>
           <p class="modal__text modal__text--mb">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
         </div>
-        <div class="modal__footer modal__footer--complete"><button class="modal__button modal__button--long button" type="button">закрыть окно</button></div>
+        <div class="modal__footer modal__footer--complete">
+          <button class="modal__button modal__button--long button" type="button">закрыть окно</button>
+        </div>
       </div>
     </div>
   </body>

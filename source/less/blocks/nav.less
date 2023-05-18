@@ -25,9 +25,7 @@
   top: 0;
   z-index: 3;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  .reset-list();
 
   @media (min-width: @tablet-width) {
     position: inherit;
@@ -99,6 +97,10 @@
     outline-offset: -1px;
   }
 
+  &:active {
+    color: rgba(250, 250, 250, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 14px;
     color: #000000;
@@ -113,10 +115,7 @@
     }
   }
 
-  &--active {
-    color: #766357;
-  }
-
+  &--active,
   &--active:hover {
     color: #766357;
   }

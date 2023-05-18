@@ -1,9 +1,21 @@
 .contact-form__wrap {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     padding-bottom: 2px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 58px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      min-height: 338px;
+      width: 1px;
+      background-color: #dbdbdb;
+    }
   }
 
   @media (min-width: @desktop-width) {

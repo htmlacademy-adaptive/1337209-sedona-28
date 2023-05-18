@@ -3,7 +3,6 @@
 
   @media (min-width: @tablet-width) {
     max-width: 458px;
-
     padding: 67px 0 81px;
   }
 
@@ -35,9 +34,19 @@
 }
 
 .catalog-cards__card {
+  @media (min-width: @tablet-width) {
+    &:nth-child(2n + 3) .card__info {
+      background-color: #eaeaea;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     position: relative;
     padding: 0;
+
+    &:nth-child(2n + 3) .card__info {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
   }
 }
 
