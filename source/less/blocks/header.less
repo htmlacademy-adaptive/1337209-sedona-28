@@ -8,9 +8,13 @@
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 4;
+  z-index: 1;
   display: inline-block;
   width: 185px;
   height: 96px;
   margin: auto;
+
+  @media (min-width: @tablet-width) {
+    z-index: 2;
+  }
 }

@@ -5,27 +5,7 @@
   border-top: 1px solid #e5e5e5;
 
   @media (min-width: @tablet-width) {
-    position: relative;
-    padding-top: 0;
     border: none;
-
-    &:first-child::before {
-      content: "";
-      position: absolute;
-      right: -29px;
-      top: -8px;
-      bottom: 33px;
-      margin: auto;
-      border-right: 1px solid #dbdbdb;
-      min-height: 338px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &:first-child::before {
-      right: -49.5px;
-      min-height: 338px;
-    }
   }
 }
 
