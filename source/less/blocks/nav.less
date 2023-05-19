@@ -10,6 +10,19 @@
   @media (min-width: @desktop-width) {
     max-width: 1200px;
   }
+
+  &--close {
+    position: inherit;
+  }
+
+  &--open {
+    position: absolute;
+    z-index: 2;
+
+    @media (min-width: @tablet-width) {
+      position: inherit;
+    }
+  }
 }
 
 .nav__toogle {
@@ -117,7 +130,9 @@
 
   &--active,
   &--active:hover {
-    color: #766357;
+    @media (min-width: @tablet-width) {
+      color: #766357;
+    }
   }
 }
 
