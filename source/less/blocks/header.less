@@ -1,20 +1,32 @@
 .header {
+  position: relative;
   width: 100%;
   min-height: 56px;
   margin: 0 auto;
+
+  & .nav--nojs {
+    margin-bottom: 56px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .header__logo {
   position: absolute;
   left: 0;
   right: 0;
+  bottom: -40px;
   z-index: 1;
   display: inline-block;
   width: 185px;
   height: 96px;
-  margin: auto;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    z-index: 2;
+    z-index: 5;
+    top: 0;
+    margin-bottom: 0;
   }
 }

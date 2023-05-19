@@ -17,12 +17,14 @@
   <body class="page__body">
     <div class="page__wrapper">
       <header class="header">
-        <a class="header__logo" href="index.html"><img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип."></a>
+        <a class="header__logo" href="index.html">
+          <img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип.">
+        </a>
         <!-- navigation -->
         <!-- nav--open открывает меню  -->
         <!-- nav--close закрывает меню -->
         <!-- nav--nojs работа меню без js -->
-        <nav class="header__nav nav nav--nojs">
+        <nav class="header__nav nav nav--close">
           <button class="nav__toogle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -180,9 +182,9 @@
     <!-- открывает м.о. modal--open -->
     <div class="modal">
       <!-- открытие не заполненного м.о. (modal__container--problem) -->
-      <div class="modal__container modal__container--problem">
+      <div class="modal__container">
         <div class="modal__description">
-          <h3 class="modal__heading">что-то пошло не так</h3>
+          <h3 class="modal__heading modal__heading--problem">что-то пошло не&nbsp;так</h3>
           <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         </div>
         <div class="modal__footer">
@@ -193,7 +195,7 @@
       <div class="modal__container">
         <div class="modal__description modal__description--long">
           <h3 class="modal__heading">Ваш отзыв отправлен!</h3>
-          <p class="modal__text modal__text--mb">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
+          <p class="modal__text modal__text--mb">Спасибо за ваше участие,&nbsp;ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
         </div>
         <div class="modal__footer modal__footer--complete">
           <button class="modal__button modal__button--long button" type="button">закрыть окно</button>
