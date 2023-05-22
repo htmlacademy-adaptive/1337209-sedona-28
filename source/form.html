@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="./css/style.min.css" as="style" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/ptsans.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="css/style.min.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="./img/favicons/icon32.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" href="img/favicons/icon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Седона</title>
   </head>
@@ -18,13 +18,13 @@
     <div class="page__wrapper">
       <header class="header">
         <a class="header__logo" href="index.html">
-          <img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип.">
+          <img class="header__logo-image" width="185" height="96" src="img/header/logo.svg" alt="Логотип.">
         </a>
         <!-- navigation -->
         <!-- nav--open открывает меню  -->
         <!-- nav--close закрывает меню -->
         <!-- nav--nojs работа меню без js -->
-        <nav class="header__nav nav nav--close">
+        <nav class="header__nav nav nav--nojs">
           <button class="nav__toogle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -47,7 +47,7 @@
       <main class="main">
         <div class="main__wrap">
           <div class="hero-block hero-block--r">
-            <img class="hero-block__img-text hero-block__img-text--change hero-block__img-text--r" src="../img/hero-block/catalog-form/mobile-sedona.svg" alt="Добро пожаловать в Седону.">
+            <img class="hero-block__img-text hero-block__img-text--change hero-block__img-text--r" src="img/hero-block/catalog-form/mobile-sedona.svg" alt="Добро пожаловать в Седону.">
           </div>
           <!-- feedback-form -->
           <section class="feedback">
@@ -179,10 +179,9 @@
         </a>
       </footer>
     </div>
-    <!-- открывает м.о. modal--open -->
-    <div class="modal">
-      <!-- открытие не заполненного м.о. (modal__container--problem) -->
-      <div class="modal__container">
+    <!-- закрывает м.о. modal--close -->
+    <div class="modal modal--close">
+      <div class="modal__container modal__container--problem">
         <div class="modal__description">
           <h3 class="modal__heading modal__heading--problem">что-то пошло не&nbsp;так</h3>
           <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
@@ -191,8 +190,10 @@
           <button class="modal__button button" type="button">ок</button>
         </div>
       </div>
-      <!--открытие м.о. при успешном заполнении (modal__container--complete) -->
-      <div class="modal__container">
+    </div>
+
+    <div class="modal modal--close">
+      <div class="modal__container modal__container--complete">
         <div class="modal__description modal__description--long">
           <h3 class="modal__heading">Ваш отзыв отправлен!</h3>
           <p class="modal__text modal__text--mb">Спасибо за ваше участие,&nbsp;ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>

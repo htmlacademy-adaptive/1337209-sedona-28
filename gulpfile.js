@@ -12,6 +12,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import { deleteAsync } from 'del';
+import svgstore from 'gulp-svgstore';
 
 
 // Styles
@@ -84,6 +85,14 @@ const createStack = () => {
   .pipe(gulp.dest('build/img'));
 }
 
+const sprite = () => {
+  return gulp.src('source/img/sprite-icon/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
+
 // Copy
 
 const copy = (done) => {
@@ -143,6 +152,7 @@ export const build = gulp.series(
     script,
     svg,
     createStack,
+    sprite,
     createWebp
   ),
 );
@@ -159,6 +169,7 @@ export default gulp.series(
     script,
     svg,
     createStack,
+    sprite,
     createWebp
   ),
   gulp.series(
