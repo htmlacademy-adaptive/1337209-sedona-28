@@ -14,7 +14,6 @@ import svgo from 'gulp-svgmin';
 import { deleteAsync } from 'del';
 import svgstore from 'gulp-svgstore';
 
-
 // Styles
 
 export const styles = () => {
