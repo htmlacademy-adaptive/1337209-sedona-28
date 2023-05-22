@@ -1,17 +1,17 @@
 .modal {
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   top: 0;
   bottom: 0;
-  display: none;
+  display: flex;
   align-items: center;
   width: 100vw;
   height: 100vh;
 
   background-color: rgba(0, 0, 0, 0.3);
 
-  &--open {
-    display: flex;
+  &--close {
+    display: none;
   }
 }
 
@@ -100,7 +100,7 @@
   min-width: 180px;
   width: 100%;
   padding: 18px 63px 14px;
-  font-family: "ptsans", sans-serif;
+  font-family: "ptsans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;

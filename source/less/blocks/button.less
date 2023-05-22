@@ -3,6 +3,7 @@
   font-weight: 700;
   text-align: center;
   line-height: 26px;
+  font-family: "ptsans", "Arial", sans-serif;
   text-transform: uppercase;
   background-color: @bluegrey;
   color: #ffffff;
@@ -15,5 +16,10 @@
   &:active {
     background-color: #5496bd;
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--disabled {
+    background-color: #e5e5e5;
+    pointer-events: none;
   }
 }

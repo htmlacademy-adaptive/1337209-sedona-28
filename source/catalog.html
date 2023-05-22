@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="./css/style.min.css" as="style" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/ptsans.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="css/style.min.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="./img/favicons/icon32.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" href="img/favicons/icon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Седона</title>
   </head>
@@ -19,14 +19,16 @@
       <!-- header -->
       <header class="header">
         <a class="header__logo" href="index.html">
-          <img class="header__logo-image" width="185" height="96" src="./img/header/logo.svg" alt="Логотип.">
+          <img class="header__logo-image" width="185" height="96" src="img/header/logo.svg" alt="Логотип.">
         </a>
         <!-- navigation -->
         <!-- nav--open открывает меню  -->
         <!-- nav--close закрывает меню -->
         <!-- nav--nojs работа меню без js -->
-        <nav class="header__nav nav nav--close">
-          <button class="nav__toogle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <nav class="header__nav nav nav--nojs">
+          <button class="nav__toogle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
             <li class="nav__item"><a class="nav__link nav__link--active">Фото и видео</a></li>
@@ -38,7 +40,9 @@
       <!--    main -->
       <main class="main">
         <div class="main__wrap">
-          <div class="hero-block hero-block--r"><img class="hero-block__img-text hero-block__img-text--r" src="../img/hero-block/catalog-form/mobile-sedona.svg" alt="Добро пожаловать в Седона."></div>
+          <div class="hero-block hero-block--r">
+            <img class="hero-block__img-text hero-block__img-text--r" src="img/hero-block/catalog-form/mobile-sedona.svg" width="229" height="39" alt="Добро пожаловать в Седона.">
+          </div>
           <!-- catalog-photo -->
           <section class="catalog-cards">
             <div class="catalog-cards__intro intro">
@@ -49,12 +53,12 @@
               <div class="catalog-cards__card card catalog-cards__card--first">
                 <a class="card__image-link" href="#">
                   <picture>
-                    <source media="(min-width: 1200px)" type="image/webp" srcset="../img/catalog-cards/desktop-cards-1.webp 1x, ../img/catalog-cards/desktop-cards-1@2x.webp 2x">
-                    <source media="(min-width: 1200px)" type="image/jpg" srcset="../img/catalog-cards/desktop-cards-1.jpg 1x, ../img/catalog-cards/desktop-cards-1@2x.jpg 2x">
-                    <source media="(min-width: 768px)" type="image/webp" srcset="../img/catalog-cards/tablet-cards-1.webp 1x, ../img/catalog-cards/tablet-cards-1@2x.webp 2x">
-                    <source media="(min-width: 768px)" type="image/jpg" srcset="../img/catalog-cards/tablet-cards-1.jpg 1x, ../img/catalog-cards/tablet-cards-1@2x.jpg 2x">
-                    <source type="image/webp" srcset="../img/catalog-cards/mobile-cards-1.webp 1x, ../img/catalog-cards/mobile-cards-1@2x.webp 2x">
-                    <img class="card__image" src="../img/catalog-cards/mobile-cards-1.jpg" srcset="../img/catalog-cards/mobile-cards-1@2x.jpg" alt="Фото, неродные просторы.">
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="img/catalog-cards/desktop-cards-1.webp 1x, img/catalog-cards/desktop-cards-1@2x.webp 2x">
+                    <source media="(min-width: 1200px)" type="image/jpg" srcset="img/catalog-cards/desktop-cards-1.jpg 1x, img/catalog-cards/desktop-cards-1@2x.jpg 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/catalog-cards/tablet-cards-1.webp 1x, img/catalog-cards/tablet-cards-1@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/jpg" srcset="img/catalog-cards/tablet-cards-1.jpg 1x, img/catalog-cards/tablet-cards-1@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/catalog-cards/mobile-cards-1.webp 1x, img/catalog-cards/mobile-cards-1@2x.webp 2x">
+                    <img class="card__image" src="img/catalog-cards/mobile-cards-1.jpg" srcset="img/catalog-cards/mobile-cards-1@2x.jpg" alt="Фото, неродные просторы.">
                   </picture>
                 </a>
                 <div class="card__info">
@@ -72,12 +76,12 @@
               <div class="catalog-cards__card card">
                 <a class="card__image-link" href="#">
                   <picture>
-                    <source media="(min-width: 1200px)" type="image/webp" srcset="../img/catalog-cards/desktop-cards-2.webp 1x, ../img/catalog-cards/desktop-cards-2@2x.webp 2x">
-                    <source media="(min-width: 1200px)" type="image/jpg" srcset="../img/catalog-cards/desktop-cards-2.jpg 1x, ../img/catalog-cards/desckop-cards-2@2x.jpg 2x">
-                    <source media="(min-width: 768px)" type="image/webp" srcset="../img/catalog-cards/tablet-cards-2.webp 1x, ../img/catalog-cards/tablet-cards-2@2x.webp 2x">
-                    <source media="(min-width: 768px)" type="image/jpg" srcset="../img/catalog-cards/tablet-cards-2.jpg 1x, ../img/catalog-cards/tablet-cards-2@2x.jpg 2x">
-                    <source type="image/webp" srcset="../img/catalog-cards/mobile-cards-2.webp 1x, ../img/catalog-cards/mobile-cards-2@2x.webp 2x">
-                    <img class="card__image" src="../img/catalog-cards/mobile-cards-2.jpg" srcset="../img/catalog-cards/mobile-cards-2@2x.jpg" alt="Фото, местная растительность.">
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="img/catalog-cards/desktop-cards-2.webp 1x, img/catalog-cards/desktop-cards-2@2x.webp 2x">
+                    <source media="(min-width: 1200px)" type="image/jpg" srcset="img/catalog-cards/desktop-cards-2.jpg 1x, img/catalog-cards/desckop-cards-2@2x.jpg 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/catalog-cards/tablet-cards-2.webp 1x, img/catalog-cards/tablet-cards-2@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/jpg" srcset="img/catalog-cards/tablet-cards-2.jpg 1x, img/catalog-cards/tablet-cards-2@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/catalog-cards/mobile-cards-2.webp 1x, img/catalog-cards/mobile-cards-2@2x.webp 2x">
+                    <img class="card__image" src="img/catalog-cards/mobile-cards-2.jpg" srcset="img/catalog-cards/mobile-cards-2@2x.jpg" alt="Фото, местная растительность.">
                   </picture>
                 </a>
                 <div class="card__info">
@@ -95,12 +99,12 @@
               <div class="catalog-cards__card card">
                 <a class="card__image-link" href="#">
                   <picture>
-                    <source media="(min-width: 1200px)" type="image/webp" srcset="../img/catalog-cards/desktop-cards-3.webp 1x, ../img/catalog-cards/desktop-cards-3@2x.webp 2x">
-                    <source media="(min-width: 1200px)" type="image/jpg" srcset="../img/catalog-cards/desktop-cards-3.jpg 1x, ../img/catalog-cards/desktop-cards-3@2x.jp 2x">
-                    <source media="(min-width: 768px)" type="image/webp" srcset="../img/catalog-cards/tablet-cards-3.webp 1x, ../img/catalog-cards/tablet-cards-3@2x.webp 2x">
-                    <source media="(min-width: 768px)" type="image/jpg" srcset="../img/catalog-cards/tablet-cards-3.jpg 1x, ../img/catalog-cards/tablet-cards-3@2x.jp 2x">
-                    <source type="image/webp" srcset="../img/catalog-cards/mobile-cards-3.webp 1x, ../img/catalog-cards/mobile-cards-3@2x.webp 2x">
-                    <img class="card__image" src="../img/catalog-cards/mobile-cards-3.jpg" srcset="../img/catalog-cards/mobile-cards-3@2x.jpg" alt="Фото, дорога на север">
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="img/catalog-cards/desktop-cards-3.webp 1x, img/catalog-cards/desktop-cards-3@2x.webp 2x">
+                    <source media="(min-width: 1200px)" type="image/jpg" srcset="img/catalog-cards/desktop-cards-3.jpg 1x, img/catalog-cards/desktop-cards-3@2x.jp 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/catalog-cards/tablet-cards-3.webp 1x, img/catalog-cards/tablet-cards-3@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/jpg" srcset="img/catalog-cards/tablet-cards-3.jpg 1x, img/catalog-cards/tablet-cards-3@2x.jp 2x">
+                    <source type="image/webp" srcset="img/catalog-cards/mobile-cards-3.webp 1x, img/catalog-cards/mobile-cards-3@2x.webp 2x">
+                    <img class="card__image" src="img/catalog-cards/mobile-cards-3.jpg" srcset="img/catalog-cards/mobile-cards-3@2x.jpg" alt="Фото, дорога на север">
                   </picture>
                 </a>
                 <div class="card__info">
@@ -118,12 +122,12 @@
               <div class="catalog-cards__card card">
                 <a class="card__image-link" href="#">
                   <picture>
-                    <source media="(min-width: 1200px)" type="image/webp" srcset="../img/catalog-cards/desktop-cards-4.webp 1x, ../img/catalog-cards/desktop-cards-4@2x.webp 2x">
-                    <source media="(min-width: 1200px)" type="image/jpg" srcset="../img/catalog-cards/desktop-cards-4.jpg 1x, ../img/catalog-cards/desktop-cards-4@2x.jpg 2x">
-                    <source media="(min-width: 768px)" type="image/webp" srcset="../img/catalog-cards/tablet-cards-4.webp 1x, ../img/catalog-cards/tablet-cards-4@2x.webp 2x">
-                    <source media="(min-width: 768px)" type="image/jpg" srcset="../img/catalog-cards/tablet-cards-4.jpg 1x, ../img/catalog-cards/tablet-cards-4@2x.jpg 2x">
-                    <source type="image/webp" srcset="../img/catalog-cards/mobile-cards-4.webp 1x, ../img/catalog-cards/mobile-cards-4@2x.webp 2x">
-                    <img class="card__image" src="../img/catalog-cards/mobile-cards-4.jpg" srcset="../img/catalog-cards/mobile-cards-4@2x.jpg" alt="Фото, Мост дьявола в Седоне.">
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="img/catalog-cards/desktop-cards-4.webp 1x, img/catalog-cards/desktop-cards-4@2x.webp 2x">
+                    <source media="(min-width: 1200px)" type="image/jpg" srcset="img/catalog-cards/desktop-cards-4.jpg 1x, img/catalog-cards/desktop-cards-4@2x.jpg 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="img/catalog-cards/tablet-cards-4.webp 1x, img/catalog-cards/tablet-cards-4@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/jpg" srcset="img/catalog-cards/tablet-cards-4.jpg 1x, img/catalog-cards/tablet-cards-4@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/catalog-cards/mobile-cards-4.webp 1x, img/catalog-cards/mobile-cards-4@2x.webp 2x">
+                    <img class="card__image" src="img/catalog-cards/mobile-cards-4.jpg" srcset="img/catalog-cards/mobile-cards-4@2x.jpg" alt="Фото, Мост дьявола в Седоне.">
                   </picture>
                 </a>
                 <div class="card__info">
@@ -148,15 +152,17 @@
             <div class="presentation-clip__video-wrap">
               <div class="presentation-clip__video-container">
                 <picture>
-                  <source media="(min-width: 1200px)" type="image/webp" srcset="../img/presentation/video-desktop.webp 1x, ../img/presentation/video-desktop@2x.webp 2x">
-                  <source media="(min-width: 1200px)" type="image/jpg" srcset="../img/presentation/video-desktop.jpg 1x, ../img/presentation/video-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" type="image/webp" srcset="../img/presentation/video-tablet.webp 1x, ../img/presentation/video-tablet@2x.webp 2x">
-                  <source media="(min-width: 768px)" type="image/jpg" srcset="../img/presentation/video-tablet.jpg 1x, ../img/presentation/video-tablet@2x.jpg 2x">
-                  <source type="image/webp" srcset="../img/presentation/video-mobile.webp 1x, ../img/presentation/video-mobile@2x.webp 2x">
-                  <img class="presentation-clip__video" src="../img/presentation/video-mobile.jpg" srcset="../img/presentation/video-mobile@2x.jpg" alt="Видеопрезентация.">
+                  <source media="(min-width: 1200px)" type="image/webp" srcset="img/presentation/video-desktop.webp 1x, img/presentation/video-desktop@2x.webp 2x">
+                  <source media="(min-width: 1200px)" type="image/jpg" srcset="img/presentation/video-desktop.jpg 1x, img/presentation/video-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/presentation/video-tablet.webp 1x, img/presentation/video-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" type="image/jpg" srcset="img/presentation/video-tablet.jpg 1x, img/presentation/video-tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/presentation/video-mobile.webp 1x, img/presentation/video-mobile@2x.webp 2x">
+                  <img class="presentation-clip__video" src="img/presentation/video-mobile.jpg" srcset="img/presentation/video-mobile@2x.jpg" alt="Видеопрезентация.">
                 </picture>
               </div>
-              <button class="presentation-clip__video-play" type="button"></button>
+              <button class="presentation-clip__video-play" type="button">
+                <span class="visually-hidden">Воспроизвести видеопрезентацию</span>
+              </button>
             </div>
           </div>
         </div>
